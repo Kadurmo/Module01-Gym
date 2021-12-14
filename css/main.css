@@ -1,3 +1,148 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    color: #2B3541;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.header {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    flex-basis: 77%;
+}
+.header-item {
+    flex-basis: 68.5%;
+}
+.header-logo {
+    flex-basis: 18.5%;
+    padding-top: 32px;
+}
+.logo-header {
+    display: block;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 56px;
+    padding-bottom: -51px;
+}
+.header-nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 52px;
+}
+.header-nav a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+}
+.social-net {
+    display: flex;
+    gap: 30px;
+}
+.header-IN {
+    display: block;
+    background-image: url(../img/icons/IN.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+.header-FB {
+    display: block;
+    background-image: url(../img/icons/FB.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+/*-------------BANNER--------------*/
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-box {
+    margin-top: 20px;
+    padding: 188px 5px 10px;
+}
+.banner-title {
+    display: block;
+    width: 610px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: uppercase;
+    margin: 0;
+}
+.banner-title span {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 125%;
+    text-align: center;
+    padding-top: 41px;
+    text-transform: lowercase;
+}
+.banner-text {
+    width: 357px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 0;
+    margin-left: 90px;
+    padding-top: 22px;
+    padding-bottom: 60px;
+}
+.banner-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    color: #1E2F40;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 22px 32px;
+    background: #FBF138;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    transition: 0.2s;
+    margin-left: 90px;
+}
+.banner-link:hover {
+    background-color: transparent;
+    color: #FBB731;
+}
+.detail {
+    display: block;
+}
+.visual {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 185px;
+}
+.visual-girl-one {
+    width: 530px;
+    height: 100%;
+    background-image: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    opacity: 0.2;
+}
+.visual-girl-two {
+    width: 230px;
+    height: 100%;
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    opacity: 0.2;
+    margin-left: 20px;
+}
+.banner img {
+    width: 970px;
+    height: 840px;
+    position: absolute;
+    right: -88px;
+    top: 15px;
 }
