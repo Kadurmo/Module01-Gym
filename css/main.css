@@ -9,8 +9,8 @@ header {
     padding-right: 50px;
 }
 .header {
-    padding-top: 35px;
-    padding-bottom: 30px;
+    padding-top: 36px;
+    padding-bottom: 31px;
     flex-basis: 77%;
 }
 .header-item {
@@ -18,7 +18,7 @@ header {
 }
 .header-logo {
     flex-basis: 18.5%;
-    padding-top: 32px;
+    padding-top: 25px;
 }
 .logo-header {
     display: block;
@@ -67,8 +67,8 @@ header {
     justify-content: space-between;
 }
 .banner-box {
-    margin-top: 20px;
-    padding: 188px 5px 10px;
+    margin-top: 17px;
+    padding: 188px 0 10px 6px;
 }
 .banner-title {
     display: block;
@@ -116,8 +116,14 @@ header {
     background-color: transparent;
     color: #FBB731;
 }
-.detail {
+.arrow {
     display: block;
+    background-image: url(../img/icons/Arrow.svg);
+    background-repeat: no-repeat;
+    width: 52px;
+    height: 55px;
+    margin-left: 88px;
+    margin-top: 200px;
 }
 .visual {
     flex-grow: 1;
@@ -143,6 +149,6 @@ header {
     width: 970px;
     height: 840px;
     position: absolute;
-    right: -88px;
-    top: 15px;
+    right: -90px;
+    top: 36px;
 }
