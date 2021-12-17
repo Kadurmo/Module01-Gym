@@ -2,6 +2,35 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #2B3541;
 }
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+    margin: 0;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 125%;
+    margin: 0;
+}
+h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+    margin: 0;
+}
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+}
+/*-------------HEADER--------------*/
 header {
     display: flex;
     align-items: center;
@@ -77,12 +106,9 @@ header {
 }
 .banner-title {
     display: block;
-    width: 610px;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 125%;
+    width: 620px;
     text-transform: uppercase;
-    margin: 0;
+    /* margin: 0; */
 }
 .banner-title span {
     display: inline-block;
@@ -95,18 +121,13 @@ header {
 }
 .banner-text {
     width: 357px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
     margin: 0;
     margin-left: 90px;
-    padding-top: 22px;
-    padding-bottom: 60px;
+    padding-top: 18px;
+    padding-bottom: 54px;
+    /* margin-top: -11px; */
 }
 .banner-link {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 150%;
     color: #1E2F40;
     text-transform: uppercase;
     text-decoration: none;
@@ -139,7 +160,7 @@ header {
     right: 185px;
 }
 .visual-girl-one {
-    width: 530px;
+    width: 515px;
     height: 100%;
     background-image: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
     opacity: 0.2;
@@ -163,20 +184,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
-}
-.event-title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 125%;
-    color: #2B3541;
-    margin: 0;
+    margin-bottom: 38px;
 }
 .event-flex {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    margin-bottom: 120px;
+    margin-bottom: 143px;
 }
 .event-cover {
     padding-top: 30px;
@@ -199,22 +213,19 @@ header {
 }
 .event-flex-date {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 150%;
     opacity: 0.6;
     margin: 0;
 } 
 .event-flex-title {
     max-width: 260px;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 127%;
+    font-weight: 700;
+    font-size: 28px;
     margin: 0;
-    margin-top: 16px;
+    margin-top: 10px;
     margin-bottom: 398px;
 }
 .event-flex-btn {
-    background: #FBB731;
+    background: #FBF138;
     border: none;
     padding: 9px 22px;
     cursor: pointer;
@@ -225,7 +236,8 @@ header {
     margin-left: 210px;
 }
 .event-flex-btn:hover {
-    background:  #F37335
+    background:  #2B3541;
+    color:#FBF138;
 }
 .event-flex-icon {
     background-image: url(../img/cart-event.svg);
@@ -250,11 +262,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: 38px;
 }
 .timing-title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 125%;
     max-width: 290px;
 }
 .timing-date {
@@ -308,54 +318,50 @@ header {
     bottom: 80px;
 }
 .timing-grid-item:nth-child(4) img {
-    bottom: 180px;
+    bottom: 178px;
 }
 .timing-grid-date {
     text-align: right;
-    font-weight: 400;
     color: #010101;
     opacity: 0.7;
     margin: 0;
 }
 .timing-grid-title {
     font-weight: 700;
+    line-height: 125%;
 }
 .timing-grid-item:nth-child(1) 
 .timing-grid-title {
-    margin-top: 163px;
+    margin-top: 156px;
 }
 .timing-grid-item:nth-child(2) 
 .timing-grid-title {
-    margin-top: 313px;
+    margin-top: 307px;
 }
 .timing-grid-item:nth-child(3) 
 .timing-grid-title {
-    margin-top: 222px;
+    margin-top: 216px;
 }
 .timing-grid-item:nth-child(4) 
 .timing-grid-title {
-    margin-top: 242px;
+    margin-top: 235px;
     margin-bottom: 20px;
 }
 .timing-grid-item:nth-child(5) 
 .timing-grid-title {
-    margin-top: 197px;
+    margin-top: 190px;
 }
 .timing-grid-item:nth-child(6) 
 .timing-grid-title {
-    margin-top: 286px;
+    margin-top: 280px;
 }
 .timing-grid-description {
-    font-weight: 400;
-    line-height: 150%;
     max-width: 280px;
 }
 /*-------------SUBSCRIPTION--------------*/
 .subscription {
-    /* position: relative; */
     background-color: #F3F3F3;
     margin-top: 160px;
-    /* z-index: 2; */
 }
 .subscription-cover {
     max-width: 600px;
@@ -366,11 +372,7 @@ header {
     z-index: 1;
 }
 .subscription-title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 49px;
     text-align: center;
-    margin: 0;
     padding-bottom: 37px;
 }
 .subscription-title::before {
@@ -391,7 +393,6 @@ header {
     border: none;
 }
 .subscription-btn {
-    display: block;
     padding: 20px 42px;
     background-color: #FBF138;
     font-weight: bold;
@@ -403,6 +404,10 @@ header {
     text-decoration: none;
     border: none;
     cursor: pointer;
+}
+.subscription-btn:hover {
+    background-color: #2B3541;
+    color: #FBF138;
 }
 .subscription-form {
     display: flex;
@@ -456,7 +461,67 @@ header {
 .subscription-label-text {
     font-size: 11px;
     line-height: 150%;
-    color: #2B3541;
+    font-weight: 400;
     opacity: 0.5;
     text-align: left;
 }
+.subscription-label-text a {
+    font-size: 11px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #2B3541;
+    opacity: 0.5;
+}
+/*-------------ABOUT-COMPANY--------------*/
+.about-company {
+    margin-top: 160px;
+}
+.about-company-cover {
+    position: relative;
+    margin-bottom: 140px;
+}
+.about-company-cover img {
+    position: absolute;
+    width: 575px;
+    height: 333px;
+    top: 0px;
+    right: 7px;
+}
+.about-company-text {
+    max-width: 470px;
+    margin-bottom: 55px;
+}
+.about-company-btn {
+    padding: 23px 52px;
+    background-color: #FBF138;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2B3541;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.about-company-btn:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+}
+.company-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+.company-achiments {
+    max-width: 1140px;
+    max-width: 252px;
+    min-width: 251px;
+}
+.company-achiments-title {
+    font-weight: 700;
+    line-height: 125%;
+}
+.company-achiments-text {
+    max-width: 240px;
+}
+/*-------------FOOTER--------------*/
