@@ -66,6 +66,9 @@ header {
     padding-left: 0;
     gap: 52px;
 }
+.header-nav li:hover {
+    transform: scale(1.04);
+}
 .header-nav a {
     text-decoration: none;
     font-weight: 400;
@@ -184,11 +187,11 @@ header {
     margin-left: 20px;
 }
 .banner img {
-    width: 970px;
-    height: 809px;
+    width: 960px;
+    height: 810px;
     position: absolute;
     right: -92px;
-    top: 22px;
+    top: 40px;
 }
 /*-------------EVENT--------------*/
 .event-header {
@@ -206,6 +209,7 @@ header {
 .event-cover {
     padding-top: 30px;
     padding-left: 30px;
+    position: relative;
 }
 .event-one {
     background-image: url(../img/event-one.png);
@@ -235,20 +239,34 @@ header {
     margin-top: 10px;
     margin-bottom: 398px;
 }
-.event-flex-btn {
+.event-flex-coaching {
     background: #FBF138;
     border: none;
     padding: 9px 22px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.2s;
     margin-left: 210px;
 }
-.event-flex-btn:hover {
-    background:  #2B3541;
-    color:#FBF138;
+.event-flex-btn {
+    max-width: 221px;
+    padding: 20px 37px;
+    color: transparent;
+    background: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    top: 185px;
+}
+.event-cover:hover .event-flex-btn {
+    background-color: #2B3541;
+    color: #FBF138;
+    transition: 0.2s;
 }
 .event-flex-icon {
     background-image: url(../img/cart-event.svg);
@@ -492,10 +510,6 @@ header {
 .subscription-label {
     display: flex;
     align-items: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     margin-top: 13px;
     margin-bottom: 0;
     margin-right: 40px;
@@ -538,15 +552,18 @@ header {
     font-size: 11px;
     line-height: 150%;
     font-weight: 400;
-    opacity: 0.5;
+    color: rgba(43, 53, 65, 0.5);
     text-align: left;
 }
 .subscription-label-text a {
     font-size: 11px;
     line-height: 150%;
     font-weight: 400;
+    color: rgba(43, 53, 65, 0.5);
+}
+.subscription-label-text a:hover {
     color: #2B3541;
-    opacity: 0.5;
+    text-decoration-line: underline;
 }
 /*-------------ABOUT-COMPANY--------------*/
 .about-company {
@@ -629,9 +646,13 @@ header {
 .logo-footer {
     background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
-    width: 176px;
+    width: 96px;
     height: 56px;
     margin-top: 8px;
+    flex-basis: 175px;
+}
+.logo-footer:hover {
+    transform: scale(1.011);
 }
 .footer-email {
     font-weight: 700;
@@ -662,12 +683,16 @@ header {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    opacity: 0.3;
+    color: rgba(43, 53, 65, 0.3);
     margin-top: 0;
 }
 .footer-fronnt {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
+    color: rgba(43, 53, 65, 0.3);
+}
+.footer-fronnt:hover {
     color: #2B3541;
+    text-decoration-line: underline;
 }
