@@ -17,18 +17,18 @@
 </head>
 <body>
     <header>
-        <div class="header-logo">
-            <a href="#" class="logo-header"></a>
-        </div>
-        <nav class="header">
-            <div class="header-item">
+        <div class="header-item">
+            <div class="header-logo">
+                <a href="#" class="logo-header"></a>
+            </div>
+            <nav>
                 <ul class="header-nav">
-                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Мероприятия</a></lic>
                     <li><a href="#">Расписание</a></li>
                     <li><a href="#">О компании</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <div class="social-net">
             <a href="#" class="header-IN"></a>
             <a href="#" class="header-FB"></a>
@@ -52,7 +52,7 @@
                         <a class="banner-link">
                             Узнать подробнее
                         </a>
-                        <a href="#" class="arrow"></a>
+                        <a href="#timing" class="arrow"></a>
                     </div>
                     <div class="visual">
                         <div class="visual-girl-one"></div>
@@ -117,7 +117,7 @@
         </section>
 
         <section>
-            <div class="timing">
+            <div class="timing" id="timing">
                 <div class="container">
                     <div class="timing-header">
                         <h3 class="timing-title">
@@ -136,6 +136,9 @@
                             <p class="timing-grid-title">
                                 Функциональный тренинг
                             </p>
+                            <p class="timing-grid-description">
+                                Система функциональных высокоинтенсивных тренировок.
+                            </p>
                         </div>
                         <div class="timing-grid-item">
                             <p class="timing-grid-date">
@@ -145,6 +148,9 @@
                             <p class="timing-grid-title">
                                 Body sculpt
                             </p>
+                            <p class="timing-grid-description">
+                                Комплекс упражнений с дополнительным оборудованием.
+                            </p>
                         </div>
                         <div class="timing-grid-item">
                             <p class="timing-grid-date">
@@ -153,6 +159,9 @@
                             <img src="./img/icons/dumbbell.svg" alt="">
                             <p class="timing-grid-title">
                                 L.A.B.
+                            </p>
+                            <p class="timing-grid-description">
+                                Силовая тренировка с акцентом на мышцы ягодиц, ног и пресса.
                             </p>
                         </div>
                         <div class="timing-grid-item">
@@ -175,6 +184,9 @@
                             <p class="timing-grid-title">
                                 Дыхательные практики
                             </p>
+                            <p class="timing-grid-description">
+                                Природный способ воздействовать на организм с целью его оздоровления.
+                            </p>
                         </div>
                         <div class="timing-grid-item">
                             <p class="timing-grid-date">
@@ -183,6 +195,9 @@
                             <img src="./img/icons/weight.svg" alt="">
                             <p class="timing-grid-title">
                                 Комплексная разминка
+                            </p>
+                            <p class="timing-grid-description">
+                                Подготовка тела перед физической нагрузкой.
                             </p>
                         </div>
                     </div>
@@ -264,23 +279,54 @@
         <div class="footer">
             <div class="container">
                 <div class="footer-item">
-                    <div class="logo-header"></div>
-                    <div class="footer-cover">
-                        <ul class="footer-nav">
-                            <li><a href="#">Мероприятия</a></li>
-                            <li><a href="#">Расписание</a></li>
-                            <li><a href="#">О компании</a></li>
-                        </ul>
+                    <div class="logo-footer">
+                        <a href="#" class="logo-f"></a>
                     </div>
+                    <ul class="footer-nav">
+                        <li><a href="#">Мероприятия</a></li>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">О компании</a></li>
+                    </ul>
+
+                    <p class="footer-email">
+                        info@freefit.com
+                    </p>
                     <div class="social-net">
                         <a href="#" class="header-IN"></a>
                         <a href="#" class="header-FB"></a>
-                    </div> 
+                    </div>
                 </div>
-                
+                <div class="footer-end">
+                    <p class="footer-text">
+                        © 2020, Все права защищены
+                    </p>
+                    <p class="footer-text">
+                        Сделано в рамках курса учебной платформы
+                        <a href="#"class="footer-fronnt">Frontend Blok</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Smooth Scroll
+      
+       const links = document.querySelectorAll(".arrow");
+
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
 
     
     
