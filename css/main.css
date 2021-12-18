@@ -55,7 +55,6 @@ header {
     background-repeat: no-repeat;
     width: 176px;
     height: 56px;
-    padding-bottom: -51px;
 }
 .header-nav {
     display: flex;
@@ -475,6 +474,7 @@ header {
 /*-------------ABOUT-COMPANY--------------*/
 .about-company {
     margin-top: 160px;
+    margin-bottom: 150px;
 }
 .about-company-cover {
     position: relative;
@@ -525,3 +525,22 @@ header {
     max-width: 240px;
 }
 /*-------------FOOTER--------------*/
+.footer {
+
+}
+.footer-item {
+    display: flex;
+}
+.footer-cover {
+
+}
+.footer-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 55px;
+}
+.footer-nav a {
+    text-decoration: none;
+}
+
