@@ -191,7 +191,7 @@ header {
     width: 960px;
     height: 810px;
     position: absolute;
-    right: -92px;
+    right: 0;
     top: 40px;
 }
 /*-------------EVENT--------------*/
@@ -613,8 +613,6 @@ header {
     gap: 60px;
 }
 .company-achiments {
-    max-width: 1140px;
-    max-width: 252px;
     min-width: 251px;
 }
 .company-achiments-title {
@@ -717,9 +715,6 @@ header {
 }
 /*-------------MEDIA--------------*/
 @media (max-width: 1160px) {
-    .container {
-        max-width: 700px;
-    }
     .visual-girl-one {
         width: 415px;
     }
@@ -729,25 +724,13 @@ header {
     .banner img {
         width: 900px;
         height: 750px;
-        right: -65px;
     }
     .arrow {
         margin-top: 140px;
     }
+    .about-company
     .container {
         margin-left: 0;
-    }
-    .timing
-    .container {
-        margin: 0 auto;
-    }
-    .subscription
-    .container {
-        margin: 0 auto;
-    }
-    .footer
-    .container {
-        margin: 0 auto;
     }
     .about-company-cover img {
         width: 540px;
@@ -756,9 +739,12 @@ header {
         left: 510px;
     }
     .company-item {
-        display: flex;
-        justify-content: space-between;
+        box-sizing: border-box;
+        flex-wrap: wrap;
         gap: 30px;
+    }
+    .company-achiments {
+        min-width: 220px;
     }
     .timing-grid-item:nth-child(1) .timing-grid-title {
         margin-top: 140px;
@@ -792,12 +778,6 @@ header {
         display: flex;
         justify-content: space-between;
     }
-
-
-
-
-
-    /*
     h1 {
         font-size: 40px;
     }
@@ -807,6 +787,31 @@ header {
     p {
         font-size: 18px;
     }
-    */
-
+}
+@media (max-width: 1090px) {
+    .event-flex {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 143px;
+        flex-wrap: wrap;
+    }
+    .company-item {
+        gap: 20px 100px;
+        justify-content: center;
+    }
+    .company-achiments {
+        min-width: 325px;
+    }
+    .company-achiments-text {
+        max-width: 330px;
+    }
+}
+@media (max-width: 1024px) {
+    .about-company-cover img {
+        width: 510px;
+        height: 270px;
+        right: 0px;
+        left: 490px;
+    }
 }
