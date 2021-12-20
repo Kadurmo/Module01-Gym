@@ -289,6 +289,19 @@ header {
     text-transform: lowercase;
     text-align: center;
 }
+.event-flex-overlay {
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0) 100%);
+    opacity: 0;
+    transition: 0.3s;
+ }
+ .event-cover:hover>.event-flex-overlay {
+    opacity: 0.5;
+ }
 /*-------------TIME-TRANING--------------*/
 .timing {
     margin-bottom: 155px;
