@@ -40,7 +40,7 @@ a {
 header {
     display: flex;
     align-items: center;
-    padding: 30px 50px 10px;
+    padding: 20px 50px 10px;
 }
 .header {
     padding-top: 36px;
@@ -62,6 +62,7 @@ header {
     background-repeat: no-repeat;
     width: 96px;
     height: 56px;
+    margin-top: 15px;
 }
 .logo-header:hover {
     transform: scale(1.011);
@@ -122,7 +123,7 @@ header {
     padding: 194px 0 10px 6px;
 }
 .banner-title {
-    width: 620px;
+    width: 610px;
     text-transform: uppercase;
 }
 .banner-title span {
@@ -135,7 +136,7 @@ header {
     text-transform: lowercase;
 }
 .banner-text {
-    width: 357px;
+    width: 285px;
     margin: 0;
     margin-left: 90px;
     margin-top: 18px;
@@ -749,7 +750,7 @@ header {
 .button-up:hover {
     background: #F37335;
 }
-/*-------------burger-menu--------------*/
+/*-------------BURGER-MENU--------------*/
 .burger {
     width: 34px;
     height: 23px;
@@ -880,6 +881,9 @@ header {
     }
 }
 @media (max-width: 1090px) {
+    .banner-title {
+        width: 470px;
+    }
     .event-flex {
         box-sizing: border-box;
         display: flex;
@@ -897,16 +901,11 @@ header {
     .company-achiments-text {
         max-width: 330px;
     }
-}
-@media (max-width: 1024px) {
     .about-company-cover img {
         left: 410px;
     }
     .about-company-text {
         max-width: 400px;
-    }
-    .banner-title {
-        width: 470px;
     }
 }
 @media (max-width: 950px) {
@@ -932,6 +931,9 @@ header {
     }
 }
 @media (max-width: 860px) {
+    .header-logo {
+        flex-basis: 23%;
+    }
     nav {
         display: none;
     }
@@ -956,5 +958,109 @@ header {
     }
     .about-company-cover img {
         left: 355px;
+    }
+}
+@media (max-width: 700px) {
+    header {
+        padding: 30px 20px 10px;
+    }
+    .header-logo {
+        flex-basis: 35%;
+    }
+    .header-item {
+        flex-basis: 80%;
+    }
+    h1,
+    h2,
+    h3 {
+        font-size: 26px;
+    }
+    .banner-title span {
+        font-size: 26px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .banner-title {
+        width: 330px;
+    }
+    .banner-text {
+        width: 285px;
+        margin-left: 0;
+    }
+    .banner-link {
+        margin-left: 0;
+    }
+    .timing-date {
+        font-size: 16px;
+        line-height: 120%;
+        opacity: 0.7;
+    }
+    .timing-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .timing-grid-item {
+        width: 290px;
+        height: 114px;
+    }.company-achiments {
+        min-width: 290px;
+    }
+    .company-achiments-text {
+        max-width: 285px;
+    }
+
+
+}
+@media (max-width: 500px) {
+    .header-logo {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 360px) {
+    header {
+        padding: 30px 10px 10px;
+    }
+    .header-logo {
+        flex-basis: 60%;
+    }
+    h1,
+    h2,
+    h3 {
+        font-size: 26px;
+    }
+    .banner-title span {
+        font-size: 26px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .banner-title {
+        width: 330px;
+    }
+    .banner-text {
+        width: 285px;
+        margin-left: 0;
+    }
+    .banner-link {
+        margin-left: 0;
+    }
+    .timing-date {
+        font-size: 16px;
+        line-height: 120%;
+        opacity: 0.7;
+    }
+    .timing-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .timing-grid-item {
+        width: 290px;
+        height: 114px;
+    }.company-achiments {
+        min-width: 290px;
+    }
+    .company-achiments-text {
+        max-width: 285px;
     }
 }
