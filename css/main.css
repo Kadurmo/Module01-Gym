@@ -477,7 +477,7 @@ header {
 }
 .subscription-cover {
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
     padding: 80px 0;
     position: relative;
     z-index: 1;
@@ -502,14 +502,14 @@ header {
     padding: 20px 117px 19px 20px;
     font-size: 18px;
     border: none;
+    margin: auto;
 }
 .subscription-btn {
     padding: 20px 42px;
     background-color: #FBF138;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
     line-height: 150%;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2B3541;
     text-decoration: none;
@@ -540,11 +540,13 @@ header {
     background-image: url("../img/icons/check\ box\ empty.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-right: 10px;
+    /*! margin-right: 10px; */
     position: relative;
     display: block;
     flex-shrink: 0;
     cursor: pointer;
+    margin: auto;
+    margin-right: 7px;
 }
 .subscription-label-new::after {
     content: "";
@@ -571,6 +573,8 @@ header {
     font-weight: 400;
     text-align: left;
     color: #8F949A;
+    margin: auto;
+    margin-left: 0;
 }
 .subscription-label-text a {
     font-size: 11px;
@@ -793,6 +797,105 @@ header {
     top: 20px;
     right: 20px;
 }
+/*-------------MODAL--------------*/
+.modalwin { 
+    width: 30%;
+    background: #F3F3F3;
+    top: 15%;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    margin: 0 auto;
+    z-index: 2;
+    display: none;
+    position: fixed;
+    padding: 60px 50px 65px;
+    animation-name: modal;
+    animation-duration: 1s;
+}
+#shadow { 
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index:1; 
+    background:#000;
+    opacity: 0.3;
+    left:0;
+    top:0;
+    animation-name: shadow;
+    animation-duration: 0.7s
+}
+.modal-close {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    background-image: url(../img/burger-close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.modal-box {
+    width: 403px;    
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #2B3541;
+}
+.modal-title {
+    position: relative;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.modal-title::before {
+    content: '';
+    position: absolute;
+    top: -31px;
+    left: 22px;
+    background-color: #fbf138;
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
+    padding: 27px;
+    border-radius: 30px;
+    z-index: -1;
+}
+.modal-description {
+    font-size: 18px;    
+    line-height: 1.5;
+}
+
+.modal-form {
+}
+
+.modal-form > input {
+    display: block;
+    outline: none;
+    border: none;
+    margin: auto;
+    padding: 23px 0 23px 17px;
+}
+input[type="email"] {
+    margin-bottom: 20px;
+}
+
+input[type="tel"] {    
+    margin-bottom: 50px;
+}
+.bg-button {
+    color: #2B3541;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #FBF138;
+    padding: 23px;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 11px 28px -15px #fbf138;
+    display: block;
+}
 /*-------------MEDIA--------------*/
 @media (max-width: 1160px) {
     .banner-title {
@@ -859,7 +962,6 @@ header {
         justify-content: space-between;
     }
     .footer-email::before {
-        right: 690px;
         bottom: 12px;
     }
     .footer-nav {
@@ -878,6 +980,15 @@ header {
     }
     p {
         font-size: 17px;
+    }
+    .footer-text {
+        font-size: 12px;
+    }
+    .footer-front {
+        font-size: 12px;
+    }
+    .modalwin { 
+        width: 75%;
     }
 }
 @media (max-width: 1090px) {
@@ -926,13 +1037,22 @@ header {
     }
 }
 @media (min-width: 861px) {
-    .header-burger {
+    .subscription-btn-mobile,
+    .header-burger,
+    .company-btn-mobile,
+    .company-mobile img {
         display: none;
     }
 }
 @media (max-width: 860px) {
+    header {
+        padding: 30px 20px 10px;
+    }
     .header-logo {
-        flex-basis: 23%;
+        flex-basis: 35%;
+    }
+    .header-item {
+        flex-basis: 80%;
     }
     nav {
         display: none;
@@ -952,23 +1072,6 @@ header {
         width: 340px;
         height: 310px;
         right: 0px;
-    }
-    .about-company-text {
-        max-width: 330px;
-    }
-    .about-company-cover img {
-        left: 355px;
-    }
-}
-@media (max-width: 700px) {
-    header {
-        padding: 30px 20px 10px;
-    }
-    .header-logo {
-        flex-basis: 35%;
-    }
-    .header-item {
-        flex-basis: 80%;
     }
     h1,
     h2,
@@ -996,21 +1099,106 @@ header {
         line-height: 120%;
         opacity: 0.7;
     }
-    .timing-grid {
-        display: flex;
-        flex-direction: column;
+    .subscription-btn-mobile {
+        padding: 20px 89px;
+        background-color: #FBF138;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #2B3541;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
     }
-    .timing-grid-item {
-        width: 290px;
-        height: 114px;
-    }.company-achiments {
-        min-width: 290px;
+    .subscription-title::before {
+        left: 85px;
+        height: 42px;
+        width: 42px;
+    }
+    .company-item {
+        text-align: center;
     }
     .company-achiments-text {
         max-width: 285px;
     }
-
-
+    .about-company {
+        margin-top: 65px;
+        margin-bottom: 50px;
+    }
+    .about-company-text {
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    .company-achiments-text {
+        max-width: 285px;
+    }
+    .about-company-cover {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .subscription-btn,
+    .about-company-btn,
+    .about-company-cover img {
+        display: none;
+    }
+    .company-mobile {
+        margin: 40px 0 80px;
+    }
+    .company-btn-mobile {
+        padding: 20px;
+        background-color: #FBF138;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #2B3541;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+    }
+    .company-mobile img {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .footer-nav {
+        flex-basis: auto;
+        gap: 0;
+        justify-content: space-between;
+    }
+    .footer-end {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-footer {
+        flex-basis: auto;
+        margin: auto;
+    }
+    .social-footer-mobile {
+        margin-bottom: 40px;
+    }
+    .timing-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .company-achiments {
+        min-width: 290px;
+    }
+    .subscription-title::before {
+        left: 0;
+    }
 }
 @media (max-width: 500px) {
     .header-logo {
@@ -1018,6 +1206,9 @@ header {
     }
 }
 @media (max-width: 360px) {
+    .subscription-title::before {
+        left: 0;
+    }
     header {
         padding: 30px 10px 10px;
     }
@@ -1057,10 +1248,20 @@ header {
     .timing-grid-item {
         width: 290px;
         height: 114px;
-    }.company-achiments {
+    }
+    .company-achiments {
         min-width: 290px;
     }
     .company-achiments-text {
         max-width: 285px;
+    }
+    .footer-text {
+        font-size: 10px;
+    }
+    .footer-front {
+        font-size: 10px;
+    }
+    .footer-nav a {
+        font-size: 12px;
     }
 }
