@@ -883,10 +883,6 @@ header {
     font-size: 18px;    
     line-height: 1.5;
 }
-
-.modal-form {
-}
-
 .modal-form > input {
     display: block;
     outline: none;
