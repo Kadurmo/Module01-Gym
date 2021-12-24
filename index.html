@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYM</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="msapplication-TileColor" sizes="150x150" href="img/favicon/mstile-150x150.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#43b1d0">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +31,7 @@
             </div>
             <nav>
                 <ul class="header-nav">
-                    <li><a href="#">Мероприятия</a></lic>
+                    <li><a href="#">Мероприятия</a></li>
                     <li><a href="#">Расписание</a></li>
                     <li><a href="#">О компании</a></li>
                 </ul>
@@ -85,7 +89,7 @@
                                 <p class="event-flex-title">
                                     Марафон выносливости
                                 </p>
-                                <a href="#" class="event-flex-btn" onclick="showModalWin()">Учавствовать</a>
+                                <a class="event-flex-btn" onclick="showModalWin()">Учавствовать</a>
                                 <button type="button" class="event-flex-coaching">
                                     <span class="event-flex-text">марафон</span>
                                 </button>
@@ -100,7 +104,7 @@
                                 <p class="event-flex-title">
                                     Как стать тренером?
                                 </p>
-                                <a href="#" class="event-flex-btn" onclick="showModalWin()">Учавствовать</a>
+                                <a class="event-flex-btn" onclick="showModalWin()">Учавствовать</a>
                                 <button type="button" class="event-flex-coaching">
                                     <span class="event-flex-text">вебинар</span>
                                 </button>
@@ -115,7 +119,7 @@
                                 <p class="event-flex-title">
                                     Йога, как стиль жизни
                                 </p>
-                                <a href="#" class="event-flex-btn" onclick="showModalWin()">Учавствовать</a>
+                                <a class="event-flex-btn" onclick="showModalWin()">Учавствовать</a>
                                 <button type="button" class="event-flex-coaching">
                                     <span class="event-flex-text">вебинар</span>
                                 </button>
@@ -183,7 +187,7 @@
                                 Силовой микс
                             </p>
                             <p class="timing-grid-description">
-                                Упражнения помогут создать красивый рельеф и прийти в&nbsp спортивную форму.
+                                Упражнения помогут создать красивый рельеф и прийти в&nbsp;спортивную форму.
                             </p>
                         </div>
                         <div class="timing-grid-item">
@@ -221,7 +225,7 @@
                     <h3 class="subscription-title">
                         Подпишитесь на рассылку
                     </h3>
-                    <form action="">
+                    <form>
                         <div class="subscription-form">
                         <input type="email" name="email" placeholder="Ваш e-mail" class="subscription-input" required>
                         <input type="submit" name="submit" id="submit" value="Подписаться" class="subscription-btn">
@@ -330,7 +334,7 @@
                     </p>
                     <p class="footer-text">
                         Сделано в рамках курса учебной платформы
-                        <a href="#"class="footer-front">Frontend Blok</a>
+                        <a href="#" class="footer-front">Frontend Blok</a>
                     </p>
                 </div>
             </div>
@@ -338,15 +342,20 @@
     </footer>
     
     <div id="modal" class="modal">
+        <a href="#" class="logo-header"></a>
         <ul class="header-nav">
-            <li><a href="#">Мероприятия</a></lic>
+            <li><a href="#">Мероприятия</a></li>
             <li><a href="#">Расписание</a></li>
             <li><a href="#">О компании</a></li>
         </ul>
-        <button class="burger-close" onclick="closeModal()"></button>
+        <div class="social-net">
+            <a href="#" class="header-IN"></a>
+            <a href="#" class="header-FB"></a>
+        </div>
+        <button class="burger-close" onclick="closeModalMenu()"></button>
     </div>
 
-    <div style="text-align: center; display: block;" id="popupWin" class="modalwin">
+    <div id="popupWin" class="modalwin">
         <button type="button" class="modal-close" onclick="closeModal()"></button>
         <div class="modal-box">
             <p class="modal-title">Заявка на участие
@@ -356,12 +365,12 @@
             </p>
         </div>        
         <form class="modal-form">
-            <input type="email" placeholder="Ваш e-mail" size="40">
-            <input type="tel" placeholder="Ваш номер телефона" size="40">
+            <input type="email" placeholder="Ваш e-mail" size="40" required>
+            <input type="tel" placeholder="Ваш номер телефона" size="40" required>
             <a href="#" class="bg-button">Отправить</a>
         </form>
+        <div class="shadow"></div>
     </div>
-    <div class="shadow"></div>
     <script>
         // Smooth Scroll
       
@@ -379,42 +388,14 @@
                 behavior: "smooth"
             });
         }
-    
-        // Button Up
-
-        window.onscroll = function(){scrollFunction()};
-
-        const upbuttons = document.querySelectorAll(".button-up");
-
-        for (const upbutton of upbuttons) {
-            upbutton.addEventListener("click", clickHandler);
-        }
-
-        function clickHandler(e) {
-            e.preventDefault();
-            const href = this.getAttribute("href");
-
-            document.querySelector(href).scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-
-        function scrollFunction(){
-            if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
-                document.getElementById('btnUp').className = 'button-up visible';
-            } else {
-                document.getElementById('btnUp').className = 'button-up hidden';
-            }
-        }
-
           // Menu
 
        function openModal() {
-           document.getElementById("modal").style.top = "0px";
+           document.getElementById("modal").style.top = "-20px";
        }
 
-       function closeModal() {
-           document.getElementById("modal").style.top = "-400px";
+       function closeModalMenu() {
+           document.getElementById("modal").style.top = "-450px";
        }
 
        
