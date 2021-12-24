@@ -1023,7 +1023,7 @@ input[type="tel"] {
         max-width: 330px;
     }
     .about-company-cover img {
-        left: 410px;
+        left: 393px;
     }
     .about-company-text {
         max-width: 400px;
@@ -1032,13 +1032,13 @@ input[type="tel"] {
 @media (max-width: 950px) {
     .banner img {
         width: 615px;
-        right: 0px;
+        right: 10px;
     }
     .visual-girl-one {
-        width: 365px;
+        width: 345px;
     }
     .visual-girl-two {
-        width: 210px;
+        width: 195px;
     }
     .about-company-cover img {
         width: 430px;
@@ -1216,6 +1216,24 @@ input[type="tel"] {
     .header-logo {
         flex-basis: 50%;
     }
+    .banner-title {
+        width: 385px;
+    }
+    h1,
+    h2,
+    h3 {
+        font-size: 27px;
+    }
+    .banner-title span {
+        font-size: 27px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .subscription-input {
+        display: block;
+        padding: 20px 40px;
+    }
 }
 @media (max-width: 360px) {
     .subscription-title::before {
@@ -1230,10 +1248,10 @@ input[type="tel"] {
     h1,
     h2,
     h3 {
-        font-size: 26px;
+        font-size: 23px;
     }
     .banner-title span {
-        font-size: 26px;
+        font-size: 23px;
     }
     p {
         font-size: 15px;
@@ -1261,11 +1279,22 @@ input[type="tel"] {
         width: 290px;
         height: 114px;
     }
+    .subscription-input {
+        padding: 20px 20px;
+    }
+    .subscription-btn-mobile {
+        padding: 20px 80px;
+    }
+    .about-company-cover,
+    .company-item {
+        text-align: left;
+        justify-content: flex-start
+    }
     .company-achiments {
         min-width: 290px;
     }
     .company-achiments-text {
-        max-width: 285px;
+        max-width: 260px;
     }
     .footer-text {
         font-size: 10px;
