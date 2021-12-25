@@ -24,24 +24,28 @@
 <body>
     <!---------HEADER--------->
     <header>
-        <div class="header-item">
-            <div class="header-logo">
-                <a href="#" class="logo-header"></a>
+        <div class="container">
+            <div class="header">
+                <div class="header-item">
+                    <div class="header-logo">
+                        <a href="#" class="logo-header"></a>
+                    </div>
+                    <div class="header-burger">
+                        <button class="burger" onclick="openModal()"></button>
+                    </div>
+                    <nav>
+                        <ul class="header-nav">
+                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">О компании</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social-net">
+                        <a href="#" class="header-IN"></a>
+                        <a href="#" class="header-FB"></a>
+                    </div>
+                </div>
             </div>
-            <div class="header-burger">
-                <button class="burger" onclick="openModal()"></button>
-            </div>
-            <nav>
-                <ul class="header-nav">
-                    <li><a href="#">Мероприятия</a></li>
-                    <li><a href="#">Расписание</a></li>
-                    <li><a href="#">О компании</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="social-net">
-            <a href="#" class="header-IN"></a>
-            <a href="#" class="header-FB"></a>
         </div>
     </header>
     <!---------BANNER--------->
@@ -336,14 +340,14 @@
                     </p>
                     <p class="footer-text">
                         Сделано в рамках курса учебной платформы
-                        <a href="#" class="footer-front">Frontend Blok</a>
+                        <a href="#" class="footer-front">Annblok</a>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
     
-    <div id="modal" class="modal">
+    <div id="modal" class="modal-mobile">
         <a href="#" class="logo-header"></a>
         <ul class="header-nav">
             <li><a href="#">Мероприятия</a></li>
@@ -356,7 +360,8 @@
         </div>
         <button class="burger-close" onclick="closeModalMenu()"></button>
     </div>
-
+    
+    
     <div id="popupWin" class="modalwin">
         <button type="button" class="modal-close" onclick="closeModal()"></button>
         <div class="modal-box">
@@ -373,6 +378,7 @@
         </form>
         <div class="shadow"></div>
     </div>
+
     <script>
         // Smooth Scroll
       
@@ -397,27 +403,27 @@
        }
 
        function closeModalMenu() {
-           document.getElementById("modal").style.top = "-450px";
+           document.getElementById("modal").style.top = "-460px";
        }
 
        
         // ModalWin
-
+        
         function showModalWin() {
 
-        var darkLayer = document.createElement('div'); // слой затемнения
-        darkLayer.id = 'shadow'; // id чтобы подхватить стиль
-        document.body.appendChild(darkLayer); // включаем затемнение
+            var darkLayer = document.createElement('div'); // слой затемнения
+            darkLayer.id = 'shadow'; // id чтобы подхватить стиль
+            document.body.appendChild(darkLayer); // включаем затемнение
 
-        var modalWin = document.getElementById('popupWin'); // находим наше "окно"
-        modalWin.style.display = 'block'; // "включаем" его
+            var modalWin = document.getElementById('popupWin'); // находим наше "окно"
+            modalWin.style.display = 'block'; // "включаем" его
 
-        }
+            }
 
-        function closeModal() {
-        document.getElementById("popupWin").style.display = "none";
-        document.getElementById("shadow").parentNode.removeChild(document.getElementById("shadow"));
-        }
+            function closeModal() {
+                document.getElementById("popupWin").style.display = "none";
+                document.getElementById("shadow").parentNode.removeChild(document.getElementById("shadow"));
+            }
     </script>
     
     
