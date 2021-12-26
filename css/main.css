@@ -35,6 +35,7 @@ a {
     font-size: 16px;
     font-weight: 700;
     line-height: 150%;
+    color: #2B3541;
 }
 /*-------------HEADER--------------*/
 .header {
@@ -138,7 +139,6 @@ a {
     margin-bottom: 55px;
 }
 .banner-link {
-    color: #1E2F40;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
@@ -256,7 +256,6 @@ a {
     font-weight: 700;
     font-size: 16px;
     line-height: 150%;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
     position: absolute;
@@ -908,7 +907,7 @@ input[type="tel"] {
         width: 400px;
     }
     .visual-girl-two {
-        width: 230px;
+        width: 195px;
         margin-left: 15px;
     }
     .banner-box {
@@ -931,7 +930,6 @@ input[type="tel"] {
     .about-company-cover img {
         width: 540px;
         height: 300px;
-        right: 0px;
         left: 510px;
     }
     .company-item {
@@ -972,7 +970,7 @@ input[type="tel"] {
     h1,
     h2,
     h3 {
-        font-size: 37px;
+        font-size: 35px;
     }
     p {
         font-size: 17px;
@@ -999,9 +997,8 @@ input[type="tel"] {
     }
     .event-flex {
         box-sizing: border-box;
-        display: flex;
         justify-content: space-evenly;
-        margin-bottom: 143px;
+        margin-bottom: 100px;
         flex-wrap: wrap;
     }
     .company-item {
@@ -1115,12 +1112,9 @@ input[type="tel"] {
         font-size: 16px;
         line-height: 150%;
         text-transform: uppercase;
-        color: #2B3541;
-        text-decoration: none;
         border: none;
         cursor: pointer;
         display: block;
-        text-align: center;
         margin: auto;
         margin-top: 20px;
     }
@@ -1162,10 +1156,7 @@ input[type="tel"] {
     .company-btn-mobile {
         padding: 20px;
         background-color: #FBF138;
-        font-size: 16px;
-        line-height: 150%;
         text-transform: uppercase;
-        color: #2B3541;
         text-decoration: none;
         border: none;
         cursor: pointer;
@@ -1177,7 +1168,6 @@ input[type="tel"] {
         margin-top: 40px;
     }
     .footer-item {
-        display: flex;
         flex-direction: column;
         margin-bottom: 20px;
     }
@@ -1198,7 +1188,6 @@ input[type="tel"] {
         margin-bottom: 40px;
     }
     .timing-grid {
-        display: flex;
         flex-direction: column;
     }
     .company-achiments {
@@ -1206,6 +1195,9 @@ input[type="tel"] {
     }
     .subscription-title::before {
         left: 0;
+    }
+    .footer-nav {
+        gap: 95px;
     }
 }
 @media (max-width: 500px) {
@@ -1242,6 +1234,12 @@ input[type="tel"] {
     }
     .subscription-label {
         margin-right: 0;
+    }
+    .footer-text {
+        font-size: 11px;
+    }
+    .footer-nav {
+        gap: 25px;
     }
 }
 @media (max-width: 360px) {
@@ -1313,6 +1311,9 @@ input[type="tel"] {
     }
     .footer-front {
         font-size: 10px;
+    }
+    .footer-nav {
+        gap: 20px;
     }
     .footer-nav a {
         font-size: 12px;
