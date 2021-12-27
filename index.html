@@ -69,9 +69,9 @@
                         <a href="#timing" class="arrow"></a>
                     </div>
                     <div class="visual">
-                        <div class="visual-girl-one"></div>
-                        <div class="visual-girl-two"></div>
-                        <img src="img/girl.png" alt="girl">
+                        <div class="visual-gradient-left"></div>
+                        <div class="visual-gradient-right"></div>
+                        <img class="visual-img" src="img/girl.png" alt="girl">
                     </div>
                 </div>
             </div>
@@ -86,9 +86,8 @@
                         </h3>
                     </div>
                     <div class="event-flex">
-                        <div class="event-flex-item">
-                            <div class="event-one event-cover">
-                                <div class="event-flex-overlay"></div>
+                        <div class="event-one">
+                            <div class="event-cover">
                                 <p class="event-flex-date">
                                     29.06 - 4.07
                                 </p>
@@ -96,14 +95,11 @@
                                     Марафон выносливости
                                 </p>
                                 <a class="event-flex-btn" id="application-form-one">Учавствовать</a>
-                                <button type="button" class="event-flex-coaching">
-                                    <span class="event-flex-text">марафон</span>
-                                </button>
+                                <p class="event-type">марафон</p>
                             </div>
                         </div>
-                        <div class="event-flex-item">
-                            <div class="event-two event-cover">
-                                <div class="event-flex-overlay"></div>
+                        <div class="event-two">
+                            <div class="event-cover">
                                 <p class="event-flex-date">
                                     9.07
                                 </p>
@@ -111,14 +107,11 @@
                                     Как стать тренером?
                                 </p>
                                 <a class="event-flex-btn" id="application-form-two">Учавствовать</a>
-                                <button type="button" class="event-flex-coaching">
-                                    <span class="event-flex-text">вебинар</span>
-                                </button>
+                                <p class="event-type">вебинар</p>
                             </div>
                         </div>
-                        <div class="event-flex-item">
-                            <div class="event-three event-cover">
-                                <div class="event-flex-overlay"></div>
+                        <div class="event-three">
+                            <div class="event-cover">
                                 <p class="event-flex-date">
                                     15.07
                                 </p>
@@ -126,9 +119,7 @@
                                     Йога, как стиль жизни
                                 </p>
                                 <a class="event-flex-btn" id="application-form-three">Учавствовать</a>
-                                <button type="button" class="event-flex-coaching">
-                                    <span class="event-flex-text">вебинар</span>
-                                </button>
+                                <p class="event-type">вебинар</p>
                             </div>
                         </div>
                     </div>
@@ -152,7 +143,7 @@
                             <p class="timing-grid-date">
                                 22 июня, 10:00
                             </p>
-                            <img src="./img/icons/body.svg" alt="">
+                            <img src="./img/icons/body.svg" alt="body">
                             <p class="timing-grid-title">
                                 Функциональный тренинг
                             </p>
@@ -164,7 +155,7 @@
                             <p class="timing-grid-date">
                                 24 июня, 10:00
                             </p>
-                            <img src="./img/icons/bottle.svg" alt="">
+                            <img src="./img/icons/bottle.svg" alt="bottle">
                             <p class="timing-grid-title">
                                 Body sculpt
                             </p>
@@ -176,7 +167,7 @@
                             <p class="timing-grid-date">
                                 26 июня, 11:00
                             </p>
-                            <img src="./img/icons/dumbbell.svg" alt="">
+                            <img src="./img/icons/dumbbell.svg" alt="dumbbell">
                             <p class="timing-grid-title">
                                 L.A.B.
                             </p>
@@ -188,7 +179,7 @@
                             <p class="timing-grid-date">
                                 23 июня, 10:00
                             </p>
-                            <img src="./img/icons/jump.svg" alt="">
+                            <img src="./img/icons/jump.svg" alt="jump">
                             <p class="timing-grid-title">
                                 Силовой микс
                             </p>
@@ -200,7 +191,7 @@
                             <p class="timing-grid-date">
                                 25 июня, 11:00
                             </p>
-                            <img src="./img/icons/heart.svg" alt="">
+                            <img src="./img/icons/heart.svg" alt="heart">
                             <p class="timing-grid-title">
                                 Дыхательные практики
                             </p>
@@ -212,7 +203,7 @@
                             <p class="timing-grid-date">
                                 27 июня, 10:00
                             </p>
-                            <img src="./img/icons/weight.svg" alt="">
+                            <img src="./img/icons/weight.svg" alt="weight">
                             <p class="timing-grid-title">
                                 Комплексная разминка
                             </p>
@@ -233,13 +224,13 @@
                     </h3>
                     <form>
                         <div class="subscription-form">
-                        <input type="email" name="email" placeholder="Ваш e-mail" class="subscription-input" required="">
+                        <input type="email" name="email" placeholder="Ваш e-mail" class="subscription-input" required>
                         <input type="submit" name="submit" id="submit" value="Подписаться" class="subscription-btn">
                         </div>
                         <label class="subscription-label" for="subscription-checkbox">
                             <input class="subscription-label-default" type="checkbox" id="subscription-checkbox">
                             <span class="subscription-label-new"></span>
-                            <span class="subscription-label-text">Согласен с обработкой <a href="#"> персональных данных</a></span>
+                            <span class="subscription-label-text">Согласен с обработкой <a href="#" target="_blank"> персональных данных</a></span>
                         </label>
                         <input type="submit" name="submit" id="submit" value="Подписаться" class="subscription-btn-mobile">
                     </form>
@@ -257,7 +248,7 @@
                         Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и вы сами увидите, что мы проводим не&nbsp;только онлайн-тренировки.
                     </p>
                     <a href="#" class="about-company-btn">Записаться</a>
-                    <img src=".//img/trainer.png" alt="">
+                    <img src=".//img/trainer.png" alt="trainer">
                 </div>
                 <div class="company-item">
                     <div class="company-achiments">
@@ -372,8 +363,8 @@
                   </p>
               </div>
               <form class="modal-form">
-                  <input type="email" placeholder="Ваш e-mail" required="">
-                  <input type="tel" placeholder="Ваш номер телефона" required="">
+                  <input type="email" placeholder="Ваш e-mail" required>
+                  <input type="tel" placeholder="Ваш номер телефона" required>
                   <a href="#" class="bg-button">Отправить</a>
               </form>
             </div>
@@ -388,8 +379,8 @@
                 </p>
             </div>
             <form class="modal-form">
-                <input type="email" placeholder="Ваш e-mail" required="">
-                <input type="tel" placeholder="Ваш номер телефона" required="">
+                <input type="email" placeholder="Ваш e-mail" required>
+                <input type="tel" placeholder="Ваш номер телефона" required>
                 <a href="#" class="bg-button">Отправить</a>
             </form>
           </div>
@@ -404,8 +395,8 @@
                   </p>
               </div>
               <form class="modal-form">
-                  <input type="email" placeholder="Ваш e-mail" required="">
-                  <input type="tel" placeholder="Ваш номер телефона" required="">
+                  <input type="email" placeholder="Ваш e-mail" required>
+                  <input type="tel" placeholder="Ваш номер телефона" required>
                   <a href="#" class="bg-button">Отправить</a>
               </form>
             </div>
