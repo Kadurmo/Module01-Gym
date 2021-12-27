@@ -184,11 +184,10 @@ a {
     opacity: 0.2;
 }
 .visual-img {
-    width: 960px;
     height: 805px;
     position: absolute;
-    top: 0;
     top: 40px;
+    right: -95px;
 }
 /*-------------EVENT--------------*/
 .event-header {
@@ -660,7 +659,6 @@ a {
     display: none;
 }
 
-
 .button-up {
     background: #FBB731;
     border-radius: 8px;
@@ -834,12 +832,25 @@ input[type="tel"] {
     display: block;
 }
 /*-------------MEDIA--------------*/
-@media (max-width: 1160px) {
+@media (max-width: 1480px) {
+    .visual {
+        right: 5px;
+    }
+    .visual-img {
+        height: 810px;
+        right: -50px;
+    }
+}
+@media (max-width: 1230px) {
     .banner-title {
         width: 500px;
     }
+    .visual {
+        max-width: 555px;
+        right: 35px;
+    }
     .visual-gradient-left {
-        width: 400px;
+        height: 603px;
     }
     .visual-gradient-right {
         width: 195px;
@@ -852,8 +863,8 @@ input[type="tel"] {
         margin-top: 30px;
     }
     .visual-img {
-        width: 695px;
-        height: 567px;
+        height: 562px;
+        width: 660px;
     }
     .arrow {
         margin-top: 82px;
@@ -874,16 +885,6 @@ input[type="tel"] {
     }
     .company-achiments {
         min-width: 220px;
-    }
-    .timing-grid-item:nth-child(1) .timing-grid-title {
-        margin-top: 140px;
-    
-    }
-    .timing-grid-item:nth-child(5) .timing-grid-title {
-        margin-top: 170px;
-    }
-    .timing-grid-item:nth-child(6) .timing-grid-title {
-        margin-top: 255px;
     }
     .subscription-btn {
         padding: 20px 35px;
@@ -926,9 +927,9 @@ input[type="tel"] {
         width: 65vw;
     }
 }
-@media (max-width: 1090px) {
+@media (max-width: 1080px) {
     .banner-title {
-        width: 470px;
+        width: 445px;
     }
     .event-flex {
         box-sizing: border-box;
@@ -952,21 +953,10 @@ input[type="tel"] {
     .about-company-text {
         max-width: 400px;
     }
-}
-@media (max-width: 950px) {
-    .visual-img {
-        width: 615px;
-    }
-    .visual-gradient-left {
-        width: 345px;
-    }
-    .visual-gradient-right {
-        width: 195px;
-    }
     .about-company-cover img {
-        width: 430px;
-        height: 240px;
-        left: 410px;
+        width: 50vw;
+        height: 28vw;
+        left: 415px;
     }
 }
 @media (min-width: 861px) {
@@ -1123,6 +1113,7 @@ input[type="tel"] {
         margin-bottom: 40px;
     }
     .timing-grid {
+        display: flex;
         flex-direction: column;
     }
     .company-achiments {
@@ -1214,7 +1205,6 @@ input[type="tel"] {
         opacity: 0.7;
     }
     .timing-grid {
-        display: flex;
         flex-direction: column;
     }
     .timing-grid-item {
