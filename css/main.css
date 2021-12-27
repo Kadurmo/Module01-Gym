@@ -39,7 +39,7 @@ a {
 }
 /*-------------HEADER--------------*/
 .header {
-    padding-top: 35px;
+    padding-top: 10px;
     padding-bottom: 6px;
 }
 .header-item {
@@ -238,7 +238,7 @@ a {
     background-image: url(../img/event-three.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     position: relative;
 }
 .event-flex-date {
@@ -249,13 +249,14 @@ a {
 .event-flex-title {
     max-width: 260px;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     margin: 0;
     margin-top: 15px;
 }
 .event-type {
     background: #FBF138;
     border: none;
+    display: none;
     padding: 10px 20px;
     transition: 0.5s;
     font-size: 18px;
@@ -290,6 +291,16 @@ a {
     color: #FBF138;
     transition: 0.5s;
     opacity: 1;
+}
+.event-btn-mobile {
+    display: none;
+    position: absolute;
+    background-image: url(../img/btn_mobile.svg);
+    height: 30px;
+    width: 30px;
+    right: 0;
+    bottom: 0;
+    border: none;
 }
 /*-------------TIME-TRANING--------------*/
 .timing {
@@ -834,11 +845,11 @@ input[type="tel"] {
 /*-------------MEDIA--------------*/
 @media (max-width: 1480px) {
     .visual {
-        right: 5px;
+        right: -45px;
     }
     .visual-img {
         height: 810px;
-        right: -50px;
+        right: 3vw;
     }
 }
 @media (max-width: 1230px) {
@@ -854,7 +865,6 @@ input[type="tel"] {
     }
     .visual-gradient-right {
         width: 195px;
-        margin-left: 15px;
     }
     .banner-box {
         padding: 150px 0 0 6px;
@@ -937,6 +947,26 @@ input[type="tel"] {
         margin-bottom: 100px;
         flex-wrap: wrap;
     }
+    .event-cover {
+        width: 92%;
+        height: 95%;
+    }
+    .event-one {
+        width: 45vw;
+        height: 75vw;
+    }
+    .event-two {
+        width: 45vw;
+        height: 75vw;
+    }
+    .event-three {
+        width: 95vw;
+        height: 95vw;
+    }
+    .event-three .event-cover {
+        width: 96%;
+        height: 96%;
+    }
     .company-item {
         gap: 20px 100px;
         justify-content: center;
@@ -969,7 +999,7 @@ input[type="tel"] {
 }
 @media (max-width: 860px) {
     header {
-        padding: 30px 20px 10px;
+        padding: 15px 20px 10px;
     }
     nav {
         display: none;
@@ -987,6 +1017,8 @@ input[type="tel"] {
         justify-content: center;
         right: 0;
         padding: 40px 0 80px;
+        position: relative;
+        left: 15vw;
     }
     .visual-gradient-left {
         width: 300px;
@@ -995,14 +1027,13 @@ input[type="tel"] {
     .visual-gradient-right {
         width: 160px;
         height: 400px;
-        margin-left: 10px;
     }
     .banner-box {
         margin: auto;
         padding: 50px 0 40px 6px;
     }
     .visual-img {
-        width: 465px;
+        width: 85vw;
         height: 400px;
     }
     .banner {
@@ -1013,6 +1044,33 @@ input[type="tel"] {
     }
     .banner-link {
         margin-left: 0;
+    }
+    .event-cover {
+        width: 90%;
+        height: 94%;
+    }
+    .event-one {
+        width: 46vw;
+        height: 75vw;
+    }
+    .event-two {
+        width: 46vw;
+        height: 75vw;
+    }
+    .event-three {
+        width: 95vw;
+        height: 110vw;
+    }
+    .event-three .event-cover {
+        width: 96%;
+        height: 96%;
+    }
+    .event-type {
+        left: 0;
+        right: auto;
+    }
+    .event-btn-mobile {
+        display: block;
     }
     .modalwin { 
         width: 70%;
@@ -1126,12 +1184,12 @@ input[type="tel"] {
         gap: 95px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     .header-logo {
         flex-basis: 100%;
     }
     .banner-title {
-        width: 385px;
+        width: 345px;
     }
     h1,
     h2,
@@ -1143,6 +1201,48 @@ input[type="tel"] {
     }
     p {
         font-size: 18px;
+    }
+    .visual {
+        justify-content: center;
+        right: 0;
+        padding: 40px 0 80px;
+        position: relative;
+        left: 0vw;
+    }
+    .visual-gradient-left {
+        width: 250px;
+        height: 400px;
+    }
+    .visual-gradient-right {
+        width: 160px;
+        height: 400px;
+    }
+    .event-cover {
+        width: 91%;
+        height: 96%;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    .event-one {
+        width: 43vw;
+        height: 90vw;
+    }
+    .event-two {
+        width: 43vw;
+        height: 90vw;
+    }
+    .event-three {
+        width: 85vw;
+        height: 100vw;
+    }
+    .event-three .event-cover {
+        width: 95%;
+        height: 96%;
+    }
+    .event-flex-btn {
+        padding: 15px 10px;
+        font-size: 15px;
+        top: 150px;
     }
     .subscription-input {
         display: block;
@@ -1167,13 +1267,23 @@ input[type="tel"] {
     .footer-nav {
         gap: 25px;
     }
+    .modal {
+        width: 60%;
+        margin: 0 15px;
+        /*
+        padding: 50px 40px 55px;
+        */
+    }
+    .modal-form > input {
+        width: 56vw;
+    }
 }
 @media (max-width: 360px) {
     .subscription-title::before {
         left: 0;
     }
     header {
-        padding: 30px 10px 10px;
+        padding: 15px 10px 10px;
     }
     .header-logo {
         flex-basis: 130%;
@@ -1187,17 +1297,46 @@ input[type="tel"] {
         font-size: 23px;
     }
     p {
-        font-size: 15px;
+        font-size: 16px;
     }
     .banner-title {
-        width: 330px;
+        width: 295px;
     }
     .banner-text {
         width: 285px;
         margin-left: 0;
     }
+    .event-cover {
+        width: 86%;
+        height: 92%;
+    }
+    .event-one {
+        width: 42vw;
+        height: 75vw;
+    }
+    .event-two {
+        width: 42vw;
+        height: 75vw;
+    }
+    .event-three {
+        width: 90vw;
+        height: 110vw;
+    }
+    .event-flex-title {
+        max-width: 260px;
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .event-flex-btn {
+        padding: 6px 5px;
+        top: 110px;
+        font-size: 11px;
+    }
     .banner-link {
         margin-left: 0;
+    }
+    .timing {
+        margin-bottom: 80px;
     }
     .timing-date {
         font-size: 16px;
@@ -1208,8 +1347,7 @@ input[type="tel"] {
         flex-direction: column;
     }
     .timing-grid-item {
-        width: 290px;
-        height: 114px;
+        width: 235px;
     }
     .subscription-input {
         padding: 20px 20px;
@@ -1242,5 +1380,11 @@ input[type="tel"] {
     }
     .footer-nav a {
         font-size: 12px;
+    }
+    .modal {
+        padding: 50px 55px 40px;
+    }
+    .modal-title::before {
+        padding: 15px;
     }
 }
