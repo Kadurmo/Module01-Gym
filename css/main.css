@@ -1217,6 +1217,9 @@ input[type="tel"] {
         width: 160px;
         height: 400px;
     }
+    .visual-img {
+        width: 95vw;
+    }
     .event-cover {
         width: 91%;
         height: 96%;
@@ -1243,6 +1246,10 @@ input[type="tel"] {
         padding: 15px 10px;
         font-size: 15px;
         top: 150px;
+    }
+    .event-flex-title {
+        font-size: 16px;
+        line-height: 120%;
     }
     .subscription-input {
         display: block;
@@ -1323,8 +1330,7 @@ input[type="tel"] {
         height: 110vw;
     }
     .event-flex-title {
-        max-width: 260px;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 120%;
     }
     .event-flex-btn {
