@@ -537,12 +537,31 @@ a {
     position: relative;
     margin-bottom: 142px;
 }
+
+
+
 .about-company-cover img {
     position: absolute;
     width: 580px;
     height: 334px;
     top: 0px;
     right: 0px;
+}
+.company-image {
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%),
+    url(../img/trainer.png);
+    /*
+    
+    <img src=".//img/trainer.png" alt="trainer">
+    
+    */
+    width: 580px;
+    height: 334px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .about-company-text {
     max-width: 470px;
@@ -883,7 +902,7 @@ input[type="tel"] {
     .container {
         margin-left: 0;
     }
-    .about-company-cover img {
+    .company-image {
         width: 540px;
         height: 300px;
         left: 510px;
@@ -977,13 +996,10 @@ input[type="tel"] {
     .company-achiments-text {
         max-width: 330px;
     }
-    .about-company-cover img {
-        left: 393px;
-    }
     .about-company-text {
         max-width: 400px;
     }
-    .about-company-cover img {
+    .company-image {
         width: 50vw;
         height: 28vw;
         left: 415px;
@@ -993,7 +1009,7 @@ input[type="tel"] {
     .subscription-btn-mobile,
     .header-burger,
     .company-btn-mobile,
-    .company-mobile img {
+    .company-image-mobile {
         display: none;
     }
 }
@@ -1130,7 +1146,7 @@ input[type="tel"] {
     .arrow,
     .subscription-btn,
     .about-company-btn,
-    .about-company-cover img {
+    .company-image {
         display: none;
     }
     .company-mobile {
@@ -1146,8 +1162,12 @@ input[type="tel"] {
         display: block;
         text-align: center;
     }
-    .company-mobile img {
+    .company-image-mobile {
+        background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../img/trainer.png);
         width: 100%;
+        height: 55vw;
+        background-position: center;
+        background-size: cover;
         margin-top: 40px;
     }
     .footer-item {
@@ -1276,13 +1296,13 @@ input[type="tel"] {
     }
     .modal {
         width: 60%;
-        margin: 0 15px;
-        /*
-        padding: 50px 40px 55px;
-        */
+        margin: 0 auto;
     }
     .modal-form > input {
         width: 56vw;
+    }
+    .company-mobile {
+        margin: 40px 0 60px;
     }
 }
 @media (max-width: 360px) {
