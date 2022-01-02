@@ -227,14 +227,13 @@
                     </h3>
                     <form>
                         <div class="subscription-form">
-                        <input type="email" name="email" placeholder="Ваш e-mail" class="subscription-input" required>
+                        <input type="email" name="email" placeholder="Ваш e-mail" class="subscription-email" required>
                         <input type="submit" name="submit" id="submit" value="Подписаться" class="subscription-btn">
                         </div>
-                        <label class="subscription-label" for="subscription-checkbox">
-                            <input class="subscription-label-default" type="checkbox" id="subscription-checkbox">
-                            <span class="subscription-label-new"></span>
-                            <span class="subscription-label-text">Согласен с обработкой <a href="#" target="_blank"> персональных данных</a></span>
-                        </label>
+                        <div class="subscription-label">
+                            <input class="subscription-checkbox" type="checkbox" id="01">
+                            <label for="01" class="subscription-label-text">Согласен с обработкой <a href="#" target="_blank"> персональных данных</a></label>
+                        </div>
                         <input type="submit" name="submit" id="submit-mobile" value="Подписаться" class="subscription-btn-mobile">
                     </form>
                 </div>

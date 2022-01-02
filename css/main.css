@@ -443,7 +443,7 @@ a {
     border-radius: 100%;
     z-index: -1;
 }
-.subscription-input {
+.subscription-email {
     padding: 22px 120px 22px 21px;
     font-size: 18px;
     border: none;
@@ -477,40 +477,43 @@ a {
     margin-bottom: 0;
     margin-right: 40px;
 }
-.subscription-label-default {
-    display: none;
+.subscription-checkbox:checked,
+.subscription-checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
 }
-.subscription-label-new {
+.subscription-checkbox:checked + label,
+.subscription-checkbox:not(:checked) + label{
+   position: relative;
+   padding-left: 25px;
+   cursor:pointer;
+}
+.subscription-checkbox:checked + label::before{
+    content:'';
+    position: absolute;
     width: 18px;
     height: 18px;
-    background-image: url("../img/icons/check\ box\ empty.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: block;
-    flex-shrink: 0;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.subscription-label-new::after {
-    content: "";
+    left:0;
+    top:calc(50% - 10px);
     background-image: url("../img/icons/check_box.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: block;
-    width: 0;
-    height: 0;
-    left: 50%;
-    top: 50%;
+ }
+ .subscription-checkbox:not(:checked) + label::before{
+    content:'';
     position: absolute;
-    transform: translate(-50%, -50%);
-    transition: 0.2s ease-in;
-}
-.subscription-label-default:checked + .subscription-label-new::after {
-    height: 18px;
     width: 18px;
-}
+    height: 18px;
+    left:0;
+    top:calc(50% - 10px);
+    background-image: url("../img/icons/check\ box\ empty.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ .radio:checked + label::before{
+    border-radius: 100%;
+ }
 .subscription-label-text {
     font-size: 11px;
     line-height: 150%;
@@ -1096,9 +1099,10 @@ input[type="tel"] {
         line-height: 120%;
         opacity: 0.7;
     }
-    .subscription-label-new {
-        margin: auto;
-        margin-right: 7px;
+    .subscription-checkbox:checked + label, .subscription-checkbox:not(:checked) + label {
+        margin: 0 auto;
+        margin-left: auto;
+        margin-left: 114px;
     }
     .subscription-btn-mobile {
         padding: 20px 89px;
@@ -1267,9 +1271,9 @@ input[type="tel"] {
         font-size: 16px;
         line-height: 120%;
     }
-    .subscription-input {
+    .subscription-email {
         display: block;
-        padding: 20px 40px;
+        padding: 20px 40px 20px 40px;
     }
     .modalwin {
         padding: 40px 30px 40px;
@@ -1280,9 +1284,6 @@ input[type="tel"] {
     }
     .modal-description {
         font-size: 15px;
-    }
-    .subscription-label {
-        margin-right: 0;
     }
     .footer-text {
         font-size: 11px;
@@ -1299,6 +1300,9 @@ input[type="tel"] {
     }
     .company-mobile {
         margin: 40px 0 60px;
+    }
+    .subscription-checkbox:checked + label, .subscription-checkbox:not(:checked) + label {
+        margin: 0 auto;
     }
 }
 @media (max-width: 360px) {
@@ -1371,14 +1375,11 @@ input[type="tel"] {
     .timing-grid-item {
         width: 235px;
     }
-    .subscription-input {
-        padding: 20px 20px;
+    .subscription-email {
+        padding: 20px 30px 20px 20px;
     }
     .subscription-btn-mobile {
         padding: 20px 80px;
-    }
-    .subscription-label-new {
-        margin-right: 3px;
     }
     .about-company-cover,
     .company-item {
