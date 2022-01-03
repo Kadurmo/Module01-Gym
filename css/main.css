@@ -870,7 +870,7 @@ input[type="tel"] {
         right: 3vw;
     }
     .modal-title::before {
-        /* left: -30px; */
+        left: -30px;
     }
 }
 @media (max-width: 1230px) {
