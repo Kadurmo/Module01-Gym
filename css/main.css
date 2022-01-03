@@ -872,7 +872,11 @@ input[type="tel"] {
         right: 3vw;
     }
     .modal-title::before {
+<<<<<<< HEAD
          left: -30px;
+=======
+        left: -30px;
+>>>>>>> a92eb05384aba3725b66a0792839c3ea69653614
     }
 }
 @media (max-width: 1230px) {
