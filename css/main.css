@@ -158,6 +158,8 @@ a {
     display: block;
     background-image: url(../img/icons/Arrow.svg);
     background-repeat: no-repeat;
+    background-color: #fff;
+    border: none;
     width: 52px;
     height: 55px;
     margin-top: 200px;
@@ -870,7 +872,7 @@ input[type="tel"] {
         right: 3vw;
     }
     .modal-title::before {
-        /* left: -30px; */
+         left: -30px;
     }
 }
 @media (max-width: 1230px) {
