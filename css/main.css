@@ -644,7 +644,7 @@ a {
     content: " ";
     position: absolute;
     right: 135px;
-    bottom: 23px;
+    bottom: 12px;
     height: 25px;
     width: 25px;
     background-color: #FBF138;
@@ -869,6 +869,9 @@ input[type="tel"] {
         height: 810px;
         right: 3vw;
     }
+    .modal-title::before {
+        /* left: -30px; */
+    }
 }
 @media (max-width: 1230px) {
     .banner-title {
@@ -953,6 +956,9 @@ input[type="tel"] {
     }
     .modal-form > input {
         width: 65vw;
+    }
+    .modal-title::before {
+        left: -3px;
     }
 }
 @media (max-width: 1080px) {
@@ -1203,6 +1209,10 @@ input[type="tel"] {
     .footer-nav {
         gap: 95px;
     }
+    .modal-title::before {
+    padding: 20px;
+    top: -18px;
+    }
 }
 @media (max-width: 650px) {
     .header-logo {
@@ -1409,5 +1419,7 @@ input[type="tel"] {
     }
     .modal-title::before {
         padding: 15px;
+        top: -12px;
+        left: 15px;
     }
 }
