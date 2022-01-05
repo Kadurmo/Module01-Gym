@@ -945,7 +945,16 @@ input[type="tel"] {
         left: -3px;
     }
 }
+@media (min-width: 1001px) {
+    .company-btn-mobile,
+    .company-image-mobile {
+        display: none;
+    }
+}
 @media (max-width: 1000px) {
+    .header-item {
+        justify-content: space-between;
+    }
     .event-flex {
         box-sizing: border-box;
         justify-content: space-evenly;
@@ -955,8 +964,10 @@ input[type="tel"] {
     .banner-box {
         padding: 180px 0 50px 5px;
     }
-    .arrow {
-        margin-top: 150px;
+    .about-company-btn,
+    .arrow,
+    .company-image {
+        display: none;
     }
     .banner-flex {
         flex-direction: column;
@@ -975,12 +986,35 @@ input[type="tel"] {
         right: 0px;
         object-fit: contain;
     }
+    .company-image-mobile {
+        background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../img/trainer.png);
+        width: 100%;
+        height: 55vw;
+        background-position: center;
+        background-size: cover;
+        margin-top: 40px;
+    }
+    .company-mobile {
+        margin: 40px 0 80px;
+    }
+    .company-btn-mobile {
+        padding: 20px;
+        background-color: #FBF138;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+    }
+    .about-company-cover,
+    .about-company-text  {
+        margin-bottom: 10px;
+    }
 }
 @media (min-width: 861px) {
     .subscription-btn-mobile,
-    .header-burger,
-    .company-btn-mobile,
-    .company-image-mobile {
+    .header-burger {
         display: none;
     }
 }
@@ -1037,6 +1071,11 @@ input[type="tel"] {
         margin-left: auto;
         margin-left: 114px;
     }
+    .subscription-title::before {
+        left: 85px;
+        height: 42px;
+        width: 42px;
+    }
     .subscription-btn-mobile {
         padding: 20px 89px;
         background-color: #FBF138;
@@ -1050,11 +1089,6 @@ input[type="tel"] {
         margin: 0 auto;
         margin-top: 20px;
     }
-    .subscription-title::before {
-        left: 85px;
-        height: 42px;
-        width: 42px;
-    }
     .about-company {
         margin-top: 65px;
         margin-bottom: 50px;
@@ -1062,32 +1096,8 @@ input[type="tel"] {
     .about-company-cover {
         margin-bottom: 40px;
     }
-    .arrow,
-    .subscription-btn,
-    .about-company-btn,
-    .company-image {
+    .subscription-btn {
         display: none;
-    }
-    .company-mobile {
-        margin: 40px 0 80px;
-    }
-    .company-btn-mobile {
-        padding: 20px;
-        background-color: #FBF138;
-        text-transform: uppercase;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        display: block;
-        text-align: center;
-    }
-    .company-image-mobile {
-        background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../img/trainer.png);
-        width: 100%;
-        height: 55vw;
-        background-position: center;
-        background-size: cover;
-        margin-top: 40px;
     }
     .footer-item {
         flex-direction: column;
