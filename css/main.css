@@ -187,20 +187,22 @@ a {
     height: 58px;
     margin-top: 200px;
 }
-.visual {
-    width: 70%;
+.banner-gradient {
+    width: 100%;
     height: 100%;
     background: linear-gradient(90deg, rgba(253, 249, 182, 0.7) 1%, rgba(253, 249, 182, 0) 70%, rgba(253, 249, 182, 0.5) 70%, rgba(253, 249, 182, 0) 110%);
     position: absolute;
     right: -75px;
     z-index: -1;
+    max-width: 70%;
 }
-.visual-img {
+.banner-gradient img {
     width: 125%;
     height: 95%;
     position: absolute;
     top: 38px;
     right: -100px;
+    object-fit: contain;
 }
 /*-------------EVENT--------------*/
 .event-header {
@@ -869,7 +871,7 @@ input[type="tel"] {
 }
 /*-------------MEDIA--------------*/
 @media (max-width: 1495px) {
-    .visual {
+    .banner-gradient {
         right: -16px;
     }
     .modal-title::before {
@@ -877,7 +879,7 @@ input[type="tel"] {
     }
 }
 @media (max-width: 1370px) {
-    .visual {
+    .banner-gradient {
         right: 85px;
     }
     .banner-title {
@@ -950,6 +952,29 @@ input[type="tel"] {
         margin-bottom: 100px;
         flex-wrap: wrap;
     }
+    .banner-box {
+        padding: 180px 0 50px 5px;
+    }
+    .arrow {
+        margin-top: 150px;
+    }
+    .banner-flex {
+        flex-direction: column;
+    }
+    .banner-gradient {
+        right: 0;
+        position: relative;
+        left: 1vw;
+        max-width: 92%;
+    }
+    .banner-gradient img {
+        width: 96%;
+        height: 95%;
+        position: relative;
+        top: 4px;
+        right: 0px;
+        object-fit: contain;
+    }
 }
 @media (min-width: 861px) {
     .subscription-btn-mobile,
@@ -978,19 +1003,6 @@ input[type="tel"] {
     }
     .header-burger {
         flex-basis: 80%;
-    }
-    .banner-flex {
-        flex-direction: column;
-    }
-    .visual {
-        justify-content: center;
-        right: 0;
-        padding: 40px 0 80px;
-        position: relative;
-        left: 15vw;
-    }
-    .banner-box {
-        padding: 50px 0 40px 6px;
     }
     .banner {
         margin-bottom: 30px;
@@ -1130,13 +1142,6 @@ input[type="tel"] {
     }
     p {
         font-size: 18px;
-    }
-    .visual {
-        justify-content: center;
-        right: 0;
-        padding: 40px 0 80px;
-        position: relative;
-        left: 0vw;
     }
     .event-flex-btn {
         padding: 12px 8px;
