@@ -73,6 +73,8 @@ a {
     background-repeat: no-repeat;
     width: 120px;
     height: 56px;
+    transform: scale(1);
+    transition: .2s ease transform;
 }
 .logo-header:hover {
     transform: scale(1.01);
@@ -175,12 +177,11 @@ a {
     padding: 22px 32px;
     background: #FBF138;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
-    transition: 0.2s;
+    transition: .2s ease background-color, .2s ease color;
 }
 .banner-link:hover {
     background-color: #1E2F40;
     color: #FBF138;
-    transition: 0.2s;
 }
 .arrow {
     cursor: pointer;
@@ -227,7 +228,6 @@ a {
     width: 337px;
     height: 570px;
     background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-one.png);
-    background-size: 100% 100%;
     position: relative;
     padding-top: 30px;
     padding-left: 30px;
@@ -240,7 +240,6 @@ a {
     width: 337px;
     height: 570px;
     background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-two.png);
-    background-size: 100% 100%;
     position: relative;
     padding-top: 30px;
     padding-left: 30px;
@@ -253,7 +252,6 @@ a {
     width: 337px;
     height: 570px;
     background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-three.png);
-    background-size: 100% 100%;
     position: relative;
     padding-top: 30px;
     padding-left: 30px;
@@ -261,8 +259,6 @@ a {
 }
 .event-three:hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-three.png);
-    background-size: 100% 100%;
-    position: relative;
 }
 .event-flex-date {
     font-weight: 700;
@@ -360,6 +356,7 @@ a {
     flex-direction: column;
     justify-content: end;
     padding: 20px 35px 0;
+    transition: .2s ease border, .2s ease box-shadow, .2s ease background;
 }
 .timing-grid-item:nth-child(1) {
     grid-area: 1 / 1 / 1 / 1;
@@ -380,7 +377,7 @@ a {
 .timing-grid-description {
     display: block;
     max-width: 280px;
-    transition: 0.5s;
+    transition: .2s ease background;
 }
 .timing-grid-item:nth-child(4):hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
@@ -432,12 +429,12 @@ a {
 }
 .timing-grid-item:hover
 .timing-grid-title {
-    transition: 0.5s;
+    transition: .5s;
 }
 .timing-grid-description {
     display: none;
     max-width: 280px;
-    transition: 0.5s;
+    transition: .2s ease display;
 }
 .timing-grid-item:hover
 .timing-grid-description{
@@ -458,7 +455,6 @@ a {
     padding-bottom: 40px;
     position: relative;
     z-index: 1;
-    width: 65%;
     margin: 0 auto;
 }
 .subscription-title::before {
@@ -490,6 +486,7 @@ a {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    transition: .2s ease background-color, .2s ease color;
 }
 .subscription-btn:hover {
     background-color: #2B3541;
@@ -560,6 +557,7 @@ a {
     color: #8F949A;
     text-decoration-line: none;
     border-bottom: 1px #8F949A solid;
+    transition: .2s ease color, .2s ease border-bottom;
 }
 .subscription-label-text a:hover {
     color: #2B3541;
@@ -606,6 +604,7 @@ a {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    transition: .2s ease background-color, .2s ease color;
 }
 .about-company-btn:hover {
     background-color: #2B3541;
@@ -613,11 +612,10 @@ a {
 }
 .company-item {
     display: flex;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: space-between;
 }
 .company-achiments {
-    width: 25%;
+    width: 23%;
 }
 .company-achiments:last-child {
     flex: 0 0 18%;
@@ -641,7 +639,7 @@ a {
     display: flex;
     justify-content: flex-start;
     gap: 88px;
-    flex-basis: 675px;
+    flex-basis: 60%;
     padding: 0;
 }
 .footer-nav a {
@@ -651,13 +649,25 @@ a {
     font-size: 14px;
     line-height: 150%;
 }
+
+.footer-nav li {
+    margin-top: 0;
+    border-bottom: none;
+    transition: .2s ease margin-top, .2s ease border-bottom;
+}
+.footer-nav li:hover {
+    margin-top: -4px;
+    border-bottom: 1px solid #2B3540;
+}
 .logo-footer {
     background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
     width: 96px;
     height: 56px;
     margin-top: 25px;
-    flex-basis: 175px;
+    flex-basis: 16%;
+    transform: scale(1);
+    transition: .2s ease transform;
 }
 .logo-footer:hover {
     transform: scale(1.011);
@@ -711,13 +721,9 @@ a {
     gap: 25px;
     margin-top: 7px;
 }
-.header-FB:hover {
-    transform: scale(1.2666);
-}
 .social-footer-mobile {
     display: none;
 }
-
 .button-up {
     background: #FBB731;
     border-radius: 8px;
@@ -730,7 +736,7 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    transition: 1s;
+    transition: .2s ease background;
 }
 .button-up.hidden {
     opacity: 0;
@@ -889,6 +895,11 @@ input[type="tel"] {
     letter-spacing: 0.5px;
     box-shadow: 0px 11px 28px -15px #fbf138;
     display: block;
+    transition: .2s ease background-color, .2s ease color;
+}
+.bg-button:hover {
+    background-color: #2B3541;
+    color: #FBF138;
 }
 /*-------------MEDIA--------------*/
 @media (max-width: 1495px) {
@@ -920,10 +931,14 @@ input[type="tel"] {
     }
     .company-item {
         flex-wrap: wrap;
+        justify-content: flex-start;
         gap: 20px 15%;
     }
     .company-achiments {
         width: 35%;
+    }
+    .company-achiments:last-child {
+        flex: 0 0 35%;
     }
     .subscription-btn {
         padding: 20px 35px;
@@ -931,9 +946,6 @@ input[type="tel"] {
     .about-company {
         margin-top: 120px;
         margin-bottom: 100px;
-    }
-    .company-achiments:last-child {
-    flex: 0 0 35%;
     }
     .subscription-title::before {
         top: -20px;
@@ -1134,7 +1146,9 @@ input[type="tel"] {
     }
     .company-item {
         flex-wrap: wrap;
-        gap: 20px 45%;
+    }
+    .company-achiments:last-child {
+        flex: 0 0 40%;
     }
     .company-achiments {
         width: 40%;
