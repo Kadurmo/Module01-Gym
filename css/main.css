@@ -261,6 +261,8 @@ a {
 }
 .event-three:hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-three.png);
+    background-size: 100% 100%;
+    position: relative;
 }
 .event-flex-date {
     font-weight: 700;
@@ -450,18 +452,20 @@ a {
     max-width: 590px;
     margin: 0 auto;
     padding: 76px 0 85px;
-    position: relative;
-    z-index: 1;
 }
 .subscription-title {
     text-align: center;
     padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    width: 65%;
+    margin: 0 auto;
 }
 .subscription-title::before {
     position: absolute;
     content: " ";
-    top: 60px;
-    right: 573px;
+    top: -15px;
+    left: -25px;
     height: 53px;
     width: 53px;
     background-color: #FBF138;
@@ -758,7 +762,7 @@ a {
     right: 0;
     margin: 20px auto 0;
     transition: 0.7s;
-    padding: 35px 15px 25px;
+    padding: 40px 15px 25px;
     box-sizing: border-box;
 }
 #modal .logo-header {
@@ -793,7 +797,7 @@ a {
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 20px;
 }
 /*-------------MODAL--------------*/
@@ -930,6 +934,12 @@ input[type="tel"] {
     }
     .company-achiments:last-child {
     flex: 0 0 35%;
+    }
+    .subscription-title::before {
+        top: -20px;
+        left: 5px;
+        height: 53px;
+        width: 53px;
     }
     .social-footer {
         display: none;
@@ -1072,7 +1082,6 @@ input[type="tel"] {
     }
     .header-logo {
         display: flex;
-        justify-content: center;
         align-items: flex-start;
     }
     .banner {
@@ -1118,7 +1127,8 @@ input[type="tel"] {
         margin-left: 114px;
     }
     .subscription-title::before {
-        left: 85px;
+        left: 15px;
+        top: -10px;
         height: 42px;
         width: 42px;
     }
@@ -1176,9 +1186,6 @@ input[type="tel"] {
     .timing-grid {
         display: flex;
         flex-direction: column;
-    }
-    .subscription-title::before {
-        left: 0;
     }
     .footer-nav {
         gap: 95px;
@@ -1273,6 +1280,11 @@ input[type="tel"] {
     .company-achiments:last-child {
         flex: 0 0 80%;
     }
+    .subscription-title::before {
+        left: 0;
+        height: 31px;
+        width: 31px;
+    }
 }
 @media (max-width: 360px) {
     .container {
@@ -1280,7 +1292,7 @@ input[type="tel"] {
         padding-right: 10px;
     }
     .subscription-title::before {
-        left: 0;
+        left: 0%;
     }
     header {
         padding: 15px 0px 10px;
