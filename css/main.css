@@ -227,38 +227,48 @@ a {
 .event-one {
     width: 337px;
     height: 570px;
-    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-one.png);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
     position: relative;
     padding-top: 30px;
     padding-left: 30px;
     transition: .2s ease background;
 }
+.event-item img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
 .event-one:hover {
-    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-one.png);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
 }
 .event-two {
     width: 337px;
     height: 570px;
-    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-two.png);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
     position: relative;
     padding-top: 30px;
     padding-left: 30px;
     transition: .2s ease background;
 }
 .event-two:hover {
-    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-two.png);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
 }
 .event-three {
     width: 337px;
     height: 570px;
-    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-three.png);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
     position: relative;
     padding-top: 30px;
     padding-left: 30px;
     transition: .2s ease background;
 }
 .event-three:hover {
-    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%), center / cover no-repeat url(../img/event-three.png);
+    background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
 }
 .event-flex-date {
     font-weight: 700;
@@ -1010,16 +1020,16 @@ input[type="tel"] {
         margin-bottom: 100px;
     }
     .event-one {
-        width: 45%;
+        width: 43%;
         height: 60vw;
     }
     .event-two {
-        width: 45%;
+        width: 43%;
         height: 60vw;
     }
     .event-three {
         width: 95%;
-        height: 110vw;
+        height: 100vw;
     }
     .banner-box {
         padding: 50px 0 50px 5px;
@@ -1104,15 +1114,6 @@ input[type="tel"] {
     }
     .banner-link {
         margin-left: 0;
-    }
-    .event-one {
-        width: 43%;
-    }
-    .event-two {
-        width: 43%;
-    }
-    .event-three {
-        height: 107vw;
     }
     .event-type {
         left: 0;
@@ -1226,19 +1227,15 @@ input[type="tel"] {
     }
     .event-one {
         width: 40%;
-        height: 60vw;
         padding-top: 20px;
         padding-left: 20px;
     }
     .event-two {
         width: 40%;
-        height: 60vw;
         padding-top: 20px;
         padding-left: 20px;
-        background-size: 138% 160%;
     }
     .event-three {
-        height: 95vw;
         padding-top: 20px;
         padding-left: 20px;
     }
