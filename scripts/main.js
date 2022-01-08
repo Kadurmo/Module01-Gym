@@ -21,7 +21,7 @@ function openModal() {
 }
 
 function closeModalMenu() {
-   document.getElementById("modal").style.top = "-460px";
+   document.getElementById("modal").style.top = "-470px";
 }
 
 
