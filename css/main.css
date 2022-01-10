@@ -213,7 +213,8 @@ a {
     position: absolute;
     top: 38px;
     right: -100px;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 /*-------------EVENT--------------*/
 .event-header {
@@ -235,8 +236,10 @@ a {
     left: 0px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
     z-index: -1;
 }
 .event-one {
@@ -576,7 +579,8 @@ a {
     line-height: 150%;
     font-weight: 400;
     color: #8F949A;
-    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
     border-bottom: 1px #8F949A solid;
     transition: .2s ease color, .2s ease border-bottom;
 }
@@ -839,8 +843,10 @@ a {
     display: none;
     position: fixed;
     padding: 60px 50px 65px;
-    animation-name: animatetop;
-    animation-duration: 1s;
+    -webkit-animation-name: animatetop;
+            animation-name: animatetop;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -848,8 +854,14 @@ a {
     width: 30vw;   
     margin: 0 auto;
     margin-bottom: 40px;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
+    -webkit-animation-name: animatetop;
+            animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+}
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0.3;}
+    to {top: 10%; opacity: 1;}
 }
 @keyframes animatetop {
     from {top: -300px; opacity: 0.3;}
@@ -1059,7 +1071,8 @@ input[type="tel"] {
         position: relative;
         top: 4px;
         right: 0px;
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
     }
     .company-image-mobile {
         background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../img/trainer.png);
