@@ -1,16 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-display: block;
-}
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-display: block;
-}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -119,6 +107,7 @@ a {
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
+    background-size: contain;
     transform: scale(1);
     transition: .2s ease transform;
 }
@@ -131,6 +120,7 @@ a {
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
+    background-size: contain;
     transform: scale(1);
     transition: .2s ease transform;
 }
@@ -465,7 +455,6 @@ a {
 /*-------------SUBSCRIPTION--------------*/
 .subscription {
     background-color: #F3F3F3;
-    margin-top: 160px;
 }
 .subscription-cover {
     max-width: 590px;
@@ -546,7 +535,7 @@ a {
     height: 18px;
     left:0;
     top:calc(50% - 10px);
-    background-image: url("../img/icons/check_box.svg");
+    background-image: url("../img/icons/checkbox__active.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -558,7 +547,7 @@ a {
     height: 18px;
     left:0;
     top:calc(50% - 10px);
-    background-image: url("../img/icons/check\ box\ empty.svg");
+    background-image: url("../img/icons/checkbox__default.svg");
     background-repeat: no-repeat;
     background-size: cover;
  }
@@ -783,7 +772,7 @@ a {
     cursor: pointer;
 }
 #modal {
-    max-width: 100vw;
+    max-width: 100%;
     background-color: #F3F3F3;
     text-align: center;
     position: absolute;
@@ -792,7 +781,7 @@ a {
     right: 0;
     margin: 20px auto 0;
     transition: 0.7s;
-    padding: 40px 15px 25px;
+    padding: 40px 15px 20px;
     box-sizing: border-box;
 }
 #modal .logo-header {
@@ -805,8 +794,9 @@ a {
     margin: 0 auto;
     margin-left: 0;
     text-align: left;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 40px;
+    padding: 0;
 }
 #modal .header-nav li:nth-child(2) {
     width: 100%;
@@ -1037,15 +1027,15 @@ input[type="tel"] {
         margin-bottom: 100px;
     }
     .event-one {
-        max-width: 43%;
+        width: 42%;
         height: 60vw;
     }
     .event-two {
-        max-width: 43%;
+        width: 42%;
         height: 60vw;
     }
     .event-three {
-        width: 95%;
+        width: 91%;
         height: 100vw;
     }
     .banner-box {
@@ -1077,7 +1067,7 @@ input[type="tel"] {
     .company-image-mobile {
         background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%), url(../img/trainer.png);
         width: 100%;
-        height: 55vw;
+        height: 57vw;
         background-position: center;
         background-size: cover;
         margin-top: 40px;
@@ -1211,7 +1201,7 @@ input[type="tel"] {
         margin: 0 auto;
     }
     .social-footer-mobile {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         justify-content: space-around;
     }
     .timing-grid {
@@ -1280,6 +1270,10 @@ input[type="tel"] {
     .event-header {
         margin-bottom: 22px;
     }
+    .event-flex {
+        gap: 10px;
+        margin-bottom: 60px;
+    }
     .event-one {
         width: 40%;
         padding-top: 20px;
@@ -1294,15 +1288,13 @@ input[type="tel"] {
         padding-top: 20px;
         padding-left: 20px;
     }
-    .event-type {
-        display: none;
-    }
     .event-flex-btn {
         padding: 12px 8px;
         font-size: 13px;
         top: 150px;
     }
     .event-flex-title {
+        width: 120px;
         font-size: 16px;
         line-height: 120%;
     }
@@ -1366,6 +1358,21 @@ input[type="tel"] {
     .header-logo {
         flex-basis: 130%;
     }
+    .burger {
+        margin-left: 20px;
+        margin-top: 3px;
+    }
+    .social-net {
+        gap: 20px;
+    }
+    .header-IN {
+        width: 26px;
+        height: 26px;
+    }
+    .header-FB {
+        width: 26px;
+        height: 26px;
+    }
     h1,
     h2,
     h3 {
@@ -1378,7 +1385,7 @@ input[type="tel"] {
         font-size: 14px;
     }
     .banner-title {
-        width: 300px;
+        width: 295px;
     }
     .event-flex-title {
         font-size: 14px;
@@ -1392,11 +1399,18 @@ input[type="tel"] {
         top: 110px;
         font-size: 11px;
     }
+    .event-type {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
     .banner-link {
         margin-left: 0;
     }
     .timing {
-        margin-bottom: 80px;
+        margin-bottom: 70px;
+    }
+    .subscription {
+        margin-top: 0;
     }
     .timing-date {
         font-size: 16px;
@@ -1428,7 +1442,7 @@ input[type="tel"] {
         font-size: 10px;
     }
     .footer-nav {
-        gap: 20px;
+        gap: 15px;
     } 
     .footer-nav a {
         font-size: 12px;
