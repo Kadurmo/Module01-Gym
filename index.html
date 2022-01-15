@@ -89,7 +89,7 @@
                             <p class="event-flex-title">
                                 Марафон выносливости
                             </p>
-                            <a class="event-flex-btn" id="application-form-one">Учавствовать</a>
+                            <a class="event-flex-btn" href="#Modal_one">Учавствовать</a>
                             <p class="event-type">марафон</p>
                             <button class="event-btn-mobile"></button>
                         </div>
@@ -101,7 +101,7 @@
                             <p class="event-flex-title">
                                 Как стать тренером?
                             </p>
-                            <a class="event-flex-btn" id="application-form-two">Учавствовать</a>
+                            <a class="event-flex-btn" href="#Modal_two">Учавствовать</a>
                             <p class="event-type">вебинар</p>
                             <button class="event-btn-mobile"></button>
                         </div>
@@ -113,7 +113,7 @@
                             <p class="event-flex-title">
                                 Йога, как стиль жизни
                             </p>
-                            <a class="event-flex-btn" id="application-form-three">Учавствовать</a>
+                            <a class="event-flex-btn" href="#Modal_three">Учавствовать</a>
                             <p class="event-type">вебинар</p>
                             <button class="event-btn-mobile"></button>
                         </div>
@@ -357,55 +357,61 @@
         </div>
         <button class="burger-close" onclick="closeModalMenu()"></button>
     </div>
-    <!---------MODAL WINDOWS--------->
+    <!---------POPUP WINDOWS--------->
     <div>
-        <div id="Modal_one" class="modal modal_one">
-            <div class="modal-content">
-              <span class="close"></span>
-                  <p class="modal-title">Заявка на участие
-                      «Марафон&nbsp;выносливости»</p>
-                  <p class="modal-description">
-                      Заполните все поля, и мы пришлем информацию в ближайшее время
-                  </p>
-              </div>
-              <form class="modal-form">
-                  <input type="email" placeholder="Ваш e-mail" required>
-                  <input type="tel" placeholder="Ваш номер телефона" required>
-                  <a href="#" class="bg-button">Отправить</a>
-              </form>
-            </div>
-
-        <div id="Modal_two" class="modal modal_two">
-          <div class="modal-content">
-            <span class="close"></span>
-                <p class="modal-title">Заявка на участие
-                    «Вебинар "Как&nbsp;стать&nbsp;тренером?"»</p>
-                <p class="modal-description">
+        <div id="Modal_one" class="popup">
+            <div class="popup__body">
+              <div class="popup__content">
+                <a href="##" class="popup__close"></a>
+                <p class="popup__title">Заявка на участие
+                    «Марафон&nbsp;выносливости»</p>
+                <p class="popup__text">
                     Заполните все поля, и мы пришлем информацию в ближайшее время
                 </p>
+                <form class="popup__form">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <input type="tel" placeholder="Ваш номер телефона" required>
+                    <a href="#" class="bg-button">Отправить</a>
+                </form>
+                </div>
             </div>
-            <form class="modal-form">
-                <input type="email" placeholder="Ваш e-mail" required>
-                <input type="tel" placeholder="Ваш номер телефона" required>
-                <a href="#" class="bg-button">Отправить</a>
-            </form>
-          </div>
-
-        <div id="Modal_free" class="modal modal_free">
-            <div class="modal-content">
-              <span class="close"></span>
-                  <p class="modal-title">Заявка на участие
-                    «Вебинар "Йога,&nbsp;как&nbsp;стиль&nbsp;жизни"»</p>
-                  <p class="modal-description">
-                      Заполните все поля, и мы пришлем информацию в ближайшее время
-                  </p>
-              </div>
-              <form class="modal-form">
-                  <input type="email" placeholder="Ваш e-mail" required>
-                  <input type="tel" placeholder="Ваш номер телефона" required>
-                  <a href="#" class="bg-button">Отправить</a>
-              </form>
+        </div>
+        
+        <div id="Modal_two" class="popup">
+            <div class="popup__body">
+              <div class="popup__content">
+                <a href="##" class="popup__close"></a>
+                <p class="popup__title">Заявка на участие
+                    «Как&nbsp;стать&nbsp;тренером?»</p>
+                <p class="popup__text">
+                    Заполните все поля, и мы пришлем информацию в ближайшее время
+                </p>
+                <form class="popup__form">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <input type="tel" placeholder="Ваш номер телефона" required>
+                    <a href="#" class="bg-button">Отправить</a>
+                </form>
+                </div>
             </div>
+        </div>
+        
+        <div id="Modal_three" class="popup">
+            <div class="popup__body">
+              <div class="popup__content">
+                <a href="##" class="popup__close"></a>
+                <p class="popup__title">Заявка на участие
+                    «Йога,&nbsp;как&nbsp;стиль&nbsp;жизни»</p>
+                <p class="popup__text">
+                    Заполните все поля, и мы пришлем информацию в ближайшее время
+                </p>
+                <form class="popup__form">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <input type="tel" placeholder="Ваш номер телефона" required>
+                    <a href="#" class="bg-button">Отправить</a>
+                </form>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="./scripts/main.js"></script>
