@@ -60,7 +60,7 @@ a {
     background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
     width: 120px;
-    height: 56px;
+    height: 30px;
     transform: scale(1);
     transition: .2s ease transform;
 }
@@ -675,8 +675,8 @@ a {
 .logo-footer {
     background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
-    width: 96px;
-    height: 56px;
+    width: 97px;
+    height: 40px;
     margin-top: 25px;
     flex-basis: 16%;
     transform: scale(1);
@@ -781,7 +781,7 @@ a {
     right: 0;
     margin: 20px auto 0;
     transition: 0.7s;
-    padding: 40px 15px 20px;
+    padding: 20px 15px;
     box-sizing: border-box;
 }
 #modal .logo-header {
@@ -790,12 +790,9 @@ a {
 #modal .header-nav {
     flex-direction: column;
     align-items: flex-start;
-    gap: 40px;
-    margin: 0 auto;
-    margin-left: 0;
+    gap: 30px;
     text-align: left;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin: 30px 0;
     padding: 0;
 }
 #modal .header-nav li:nth-child(2) {
@@ -1039,7 +1036,7 @@ input[type="tel"] {
         height: 100vw;
     }
     .banner-box {
-        padding: 50px 0 50px 5px;
+        padding: 20px 0 50px 5px;
     }
     .about-company-btn,
     .arrow,
@@ -1097,8 +1094,8 @@ input[type="tel"] {
     }
 }
 @media (max-width: 860px) {
-    header {
-        padding: 15px 20px 10px 0;
+    .header {
+        padding: 20px 0 10px;
     }
     nav {
         display: none;
@@ -1174,11 +1171,10 @@ input[type="tel"] {
         margin-top: 20px;
     }
     .about-company {
-        margin-top: 65px;
-        margin-bottom: 50px;
+        margin: 50px 0;
     }
     .about-company-cover {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .subscription-btn {
         display: none;
@@ -1272,7 +1268,7 @@ input[type="tel"] {
     }
     .event-flex {
         gap: 10px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
     .event-one {
         width: 40%;
@@ -1343,6 +1339,12 @@ input[type="tel"] {
         height: 31px;
         width: 31px;
     }
+    .timing {
+        margin-bottom: 50px;
+    }
+    .subscription-cover {
+        padding: 60px 0;
+    }
 }
 @media (max-width: 360px) {
     .container {
@@ -1351,9 +1353,6 @@ input[type="tel"] {
     }
     .subscription-title::before {
         left: 5%;
-    }
-    header {
-        padding: 15px 0px 10px;
     }
     .header-logo {
         flex-basis: 130%;
@@ -1376,7 +1375,7 @@ input[type="tel"] {
     h1,
     h2,
     h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
     .banner-title span {
         font-size: 23px;
@@ -1385,7 +1384,7 @@ input[type="tel"] {
         font-size: 14px;
     }
     .banner-title {
-        width: 295px;
+        width: 290px;
     }
     .event-flex-title {
         font-size: 14px;
@@ -1406,9 +1405,6 @@ input[type="tel"] {
     .banner-link {
         margin-left: 0;
     }
-    .timing {
-        margin-bottom: 70px;
-    }
     .subscription {
         margin-top: 0;
     }
@@ -1421,15 +1417,15 @@ input[type="tel"] {
         padding: 20px 6% 20px 25px;
     }
     .subscription-btn-mobile {
-        padding: 20px 80px;
+        padding: 20px 75px;
     }
     .about-company-cover,
     .company-item {
         text-align: left;
         justify-content: flex-start;
+        gap: 5px;
     }
     .about-company-text {
-        margin-bottom: 40px;
         max-width: 310px;
     }
     .company-achiments-text {
