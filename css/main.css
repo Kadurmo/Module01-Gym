@@ -356,10 +356,10 @@ a {
     gap: 20px;
 }
 .timing-grid-item {
-    border: 1px solid rgb(43 52 64 / 50%);
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
+    border: 1px solid rgb(43 52 64 / 50%);
     position: relative;
     padding: 20px 30px 0;
     transition: .2s ease border, .2s ease box-shadow, .2s ease background;
@@ -377,13 +377,14 @@ a {
     grid-area: 2 / 1 / 5 / 1;
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
-    border: none;
+    border: 1px solid transparent;
 }
 .timing-grid-item:nth-child(4)
 .timing-grid-description {
     display: block;
     max-width: 280px;
     transition: .2s ease background;
+    max-height: 500px;
 }
 .timing-grid-item:nth-child(4):hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
@@ -397,7 +398,7 @@ a {
 .timing-grid-item:hover {
     background: rgba(243, 243, 243, .5);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
-    border: none;
+    border: 1px solid transparent;
 }
 .timing-grid-item:nth-child(1) img {
     width: 65px;
@@ -437,18 +438,15 @@ a {
     margin-top: 25px;
     transition: .2s linear;
 }
-.timing-grid-item:hover
-.timing-grid-title {
-    transition: .2s linear;
-}
 .timing-grid-description {
-    display: none;
     max-width: 280px;
-    transition: .2s ease display;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s linear;    
 }
 .timing-grid-item:hover
 .timing-grid-description{
-    display: block;
+    max-height: 500px;
 }
 /*-------------SUBSCRIPTION--------------*/
 .subscription {
