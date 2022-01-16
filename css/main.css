@@ -361,7 +361,7 @@ a {
     flex-direction: column;
     justify-content: end;
     position: relative;
-    padding: 20px 35px 0;
+    padding: 20px 30px 0;
     transition: .2s ease border, .2s ease box-shadow, .2s ease background;
 }
 .timing-grid-item:nth-child(1) {
@@ -1191,6 +1191,8 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: center;
+        height: 140px;
     }
     .timing-grid-item:nth-child(1) img {
         width: 40px;
@@ -1233,6 +1235,10 @@ a {
     }
 }
 @media (max-width: 650px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .banner-title {
         width: 324px;
     }
@@ -1245,7 +1251,7 @@ a {
         font-size: 27px;
     }
     p {
-        font-size: 18px;
+        font-size: 17px;
     }
     .event-header {
         margin-bottom: 22px;
@@ -1277,6 +1283,10 @@ a {
         width: 120px;
         font-size: 16px;
         line-height: 120%;
+    }
+    .timing-grid-item {
+        height: 130px;
+        padding: 30px 0 0 20px;
     }
     .subscription-email {
         padding: 20px 15% 20px 25px;
@@ -1392,6 +1402,9 @@ a {
     }
     .subscription {
         margin-top: 0;
+    }
+    .timing-grid-item {
+        height: 100px;
     }
     .timing-date {
         font-size: 16px;
