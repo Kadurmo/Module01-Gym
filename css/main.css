@@ -827,24 +827,24 @@ a {
     overflow-x: auto;
     overflow-y: hidden;
     transition: all .8s ease 0s;
-  }
-  .popup:target {
+}
+.popup:target {
     opacity: 1;
     visibility: visible;
-  }
-  .popup:target .popup__content {
+}
+.popup:target .popup__content {
     transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
     opacity: 1;
-  }
-  .popup__body {
+}
+.popup__body {
     min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     transition: all .5s ease 0s;
-  }
-  .popup__content {
+}
+.popup__content {
     text-align: center;
     background: #F3F3F3;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -852,76 +852,89 @@ a {
     padding: 60px;
     margin: 0 auto;
     margin-bottom: 40px;
-  }
+}
   .popup__close {
     width: 22px;
     height: 22px;
-    background-color: transparent;
-    background-image: url(../img/burger-close.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 20px;
-  }
-  .popup__title {
+    right: 25px;
+    opacity: 0.3;
+}
+.popup__close:hover {
+    opacity: 1;
+}
+.popup__close:before, .popup__close:after {
+    position: absolute;
+    left: 10px;
+    content: '';
+    height: 25px;
+    width: 2.3px;
+    background-color: #000;
+}
+.popup__close:before {
+    transform: rotate(45deg);
+}
+.popup__close:after {
+    transform: rotate(-45deg);
+}
+.popup__title {
     display: inline-block;
     position: relative;
     text-align: center;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 18px;
-  }
-  .popup__title::before {
-      content: '';
-      position: absolute;
-      top: -25px;
-      left: 0;
-      background-color: #fbf138;
-      box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
-      padding: 27px;
-      border-radius: 30px;
-      z-index: -1;
-  }
-  .popup__text {
-    font-size: 18px;
-    line-height: 1.5;
+}
+.popup__title::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background-color: #fbf138;
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
+    padding: 27px;
+    border-radius: 30px;
+    z-index: -1;
+}
+.popup__text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.popup__form > input {
+    display: block;
+    outline: none;
+    border: none;
     margin: 0 auto;
+    padding: 23px 0 23px 17px;
+    width: 90%;
+}
+.popup__form input[type="email"] {
+    margin-bottom: 20px;
+}
+input[type="tel"] {
     margin-bottom: 40px;
-  }
-  .popup__form > input {
-      display: block;
-      outline: none;
-      border: none;
-      margin: 0 auto;
-      padding: 23px 0 23px 17px;
-      width: 90%;
-  }
-  .popup__form input[type="email"] {
-      margin-bottom: 20px;
-  }
-  input[type="tel"] {
-      margin-bottom: 40px;
-  }
-  .bg-button {
-      color: #2B3541;
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none;
-      text-transform: uppercase;
-      background-color: #FBF138;
-      padding: 23px;
-      letter-spacing: 0.5px;
-      box-shadow: 0px 11px 28px -15px #fbf138;
-      display: block;
-      transition: .2s ease background-color, .2s ease color;
-  }
-  .bg-button:hover {
-      background-color: #2B3541;
-      color: #FBF138;
-  }
+}
+.bg-button {
+    color: #2B3541;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #FBF138;
+    padding: 23px;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 11px 28px -15px #fbf138;
+    display: block;
+    transition: .2s ease background-color, .2s ease color;
+}
+.bg-button:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+}
 /*-------------MEDIA--------------*/
 @media (max-width: 1495px) {
     .banner-gradient {
