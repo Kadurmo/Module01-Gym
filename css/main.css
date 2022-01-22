@@ -303,32 +303,32 @@ a {
 .event-btn-mobile {
     display: none;
 }
-/*-------------TIME-TRANING--------------*/
-.timing {
+/*-------------TIMETABLE--------------*/
+.timetable {
     margin-bottom: 160px;
 }
-.timing-header {
+.timetable-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 35px;
-    align-items: center;
+    align-items: baseline;
 }
-.timing-title {
+.timetable-title {
     max-width: 290px;
 }
-.timing-date {
+.timetable-date {
     font-weight: 700;
     font-size: 27px;
     line-height: 125%;
     margin-top: 0;
 }
-.timing-grid {
+.timetable-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px 36px 80px 276px;
     gap: 20px;
 }
-.timing-grid-item {
+.timetable-grid-item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -337,67 +337,67 @@ a {
     padding: 20px 30px;
     transition: .2s ease border, .2s ease box-shadow, .2s ease background;
 }
-.timing-grid-item:nth-child(1) {
+.timetable-grid-item:nth-child(1) {
     grid-area: 1 / 1 / 1 / 1;
 }
-.timing-grid-item:nth-child(2) {
+.timetable-grid-item:nth-child(2) {
     grid-area: 1 / 2 / 4 / 2;
 }
-.timing-grid-item:nth-child(3) {
+.timetable-grid-item:nth-child(3) {
     grid-area: 1 / 3 / 3 / 3;
 }
-.timing-grid-item:nth-child(4) {
+.timetable-grid-item:nth-child(4) {
     grid-area: 2 / 1 / 5 / 1;
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
     border: 1px solid transparent;
 }
-.timing-grid-item:nth-child(4)
-.timing-grid-description {
+.timetable-grid-item:nth-child(4)
+.timetable-grid-description {
     display: block;
     max-width: 280px;
     transition: .2s ease background;
     max-height: 500px;
 }
-.timing-grid-item:nth-child(4):hover {
+.timetable-grid-item:nth-child(4):hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
 }
-.timing-grid-item:nth-child(5) {
+.timetable-grid-item:nth-child(5) {
     grid-area: 4 / 2 / 5 / 2;
 }
-.timing-grid-item:nth-child(6) {
+.timetable-grid-item:nth-child(6) {
     grid-area: 3 / 3 / 5 / 3;
 }
-.timing-grid-item:hover {
+.timetable-grid-item:hover {
     background: rgba(243, 243, 243, .5);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
     border: 1px solid transparent;
 }
-.timing-grid-item:nth-child(1) img {
+.timetable-grid-item:nth-child(1) img {
     width: 65px;
     height: 65px;
 }
-.timing-grid-item:nth-child(2) img {
+.timetable-grid-item:nth-child(2) img {
     width: 40px;
     height: 85px;
 }
-.timing-grid-item:nth-child(3) img {
+.timetable-grid-item:nth-child(3) img {
     width: 90px;
     height: 50px;
 }
-.timing-grid-item:nth-child(4) img {
+.timetable-grid-item:nth-child(4) img {
     width: 65px;
     height: 105px;
 }
-.timing-grid-item:nth-child(5) img {
+.timetable-grid-item:nth-child(5) img {
     width: 65px;
     height: 60px;
 }
-.timing-grid-item:nth-child(6) img {
+.timetable-grid-item:nth-child(6) img {
     width: 58px;
     height: 66px;
 }
-.timing-grid-date {
+.timetable-grid-date {
     color: #010101;
     opacity: 0.7;
     margin: 0;
@@ -405,21 +405,21 @@ a {
     top: 20px;
     right: 20px;
 }
-.timing-grid-title {
+.timetable-grid-title {
     font-weight: 700;
     line-height: 125%;
     margin: 25px 0 12px;
     transition: .2s linear;
 }
-.timing-grid-description {
+.timetable-grid-description {
     max-width: 280px;
     max-height: 0;
     overflow: hidden;
     transition: .3s linear;
     margin: 0;
 }
-.timing-grid-item:hover
-.timing-grid-description{
+.timetable-grid-item:hover
+.timetable-grid-description{
     max-height: 500px;
 }
 /*-------------SUBSCRIPTION--------------*/
@@ -450,7 +450,7 @@ a {
     z-index: -1;
 }
 .subscription-email {
-    padding: 22px 40% 22px 20px;
+    padding: 22px 22% 22px 20px;
     font-size: 18px;
     border: none;
 }
@@ -552,7 +552,7 @@ a {
 .about-company-flex {
     display: flex;
     margin-bottom: 65px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .about-company-cover {padding-right: 15px;}
 .about-company-cover img {
@@ -608,7 +608,7 @@ a {
 /*-------------FOOTER--------------*/
 .footer {
     background-color: #F3F3F3;
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 5px;
 }
 .footer-item {
@@ -658,7 +658,6 @@ a {
     line-height: 150%;
     position: relative;
     z-index: 1;
-    margin-top: 10px;
     text-decoration: none;
 }
 .footer-email::before {
@@ -700,7 +699,6 @@ a {
 .social-footer-net {
     display: flex;
     gap: 25px;
-    margin-top: 7px;
 }
 .social-footer-mobile {
     display: none;
@@ -814,7 +812,7 @@ a {
     visibility: hidden;
     overflow-x: auto;
     overflow-y: hidden;
-    transition: all .8s ease 0s;
+    transition: all .2s ease 0s;
 }
 .popup:target {
     opacity: 1;
@@ -830,7 +828,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: all .5s ease 0s;
+    transition: all .2s ease 0s;
 }
 .popup__content {
     text-align: center;
@@ -1123,7 +1121,25 @@ input[type="tel"] {
         right: 0;
         bottom: 0;
     }
-    .timing-date {
+    .timetable_one {
+        order: 1;
+    }
+    .timetable_two {
+        order: 3;
+    }
+    .timetable_three {
+        order: 5;
+    }
+    .timetable_four {
+        order: 2;
+    }
+    .timetable_five {
+        order: 4;
+    }
+    .timetable_six {
+        order: 6;
+    }
+    .timetable-date {
         font-size: 16px;
         line-height: 120%;
         opacity: 0.7;
@@ -1219,43 +1235,43 @@ input[type="tel"] {
         margin-bottom: 35px;
         justify-content: space-around;
     }
-    .timing-grid {
+    .timetable-grid {
         display: flex;
         flex-direction: column;
     }
-    .timing-grid-item {
+    .timetable-grid-item {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         height: 160px;
     }
-    .timing-grid-item:nth-child(1) img {
+    .timetable-grid-item:nth-child(1) img {
         width: 40px;
         height: 40px;
         margin-right: 20px;
     }
-    .timing-grid-item:nth-child(2) img {
+    .timetable-grid-item:nth-child(2) img {
         width: 25px;
         height: 45px;
         margin-right: 20px;
     }
-    .timing-grid-item:nth-child(3) img {
+    .timetable-grid-item:nth-child(3) img {
         width: 45px;
         height: 25px;
         margin-right: 20px;
     }
-    .timing-grid-item:nth-child(4) img {
+    .timetable-grid-item:nth-child(4) img {
         width: 35px;
         height: 55px;
         margin-right: 20px;
     }
-    .timing-grid-item:nth-child(5) img {
+    .timetable-grid-item:nth-child(5) img {
         width: 40px;
         height: 40px;
         margin-right: 20px;
     }
-    .timing-grid-item:nth-child(6) img {
+    .timetable-grid-item:nth-child(6) img {
         width: 35px;
         height: 40px;
         margin-right: 20px;
@@ -1319,7 +1335,7 @@ input[type="tel"] {
     .subscription-form {
         max-width: 330px;
     }
-    .timing-grid-item {
+    .timetable-grid-item {
         height: 150px;
         padding: 20px 20px 15px;
     }
@@ -1352,7 +1368,7 @@ input[type="tel"] {
         top: -16px;
         left: 16%;
     }
-    .timing {
+    .timetable {
         margin-bottom: 50px;
     }
     .subscription-cover {
@@ -1435,15 +1451,15 @@ input[type="tel"] {
     .subscription {
         margin-top: 0;
     }
-    .timing-grid-item {
+    .timetable-grid-item {
         height: 120px;
     }
-    .timing-date {
+    .timetable-date {
         font-size: 16px;
         line-height: 120%;
         opacity: 0.7;
     }
-    .timing-grid-description {
+    .timetable-grid-description {
         font-size: 12px;
         margin-bottom: 0;
     }
