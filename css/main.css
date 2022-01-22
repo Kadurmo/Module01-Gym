@@ -800,18 +800,33 @@ a {
 #modal .social-net {
     justify-content: flex-end;
 }
-.burger-close {
+.burger_close {
     width: 22px;
     height: 22px;
-    background-color: transparent;
-    background-image: url(../img/burger-close.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 40px;
-    right: 20px;
+    top: 9px;
+    right: 15px;
+    transform: scale(1);
+    transition: .2s ease transform;
+}
+.burger_close:hover {
+    transform: scale(1.2);
+}
+.burger_close:before, .burger_close:after {
+    position: absolute;
+    left: 10px;
+    content: '';
+    height: 25px;
+    width: 2.3px;
+    background-color: #000;
+}
+.burger_close:before {
+    transform: rotate(45deg);
+}
+.burger_close:after {
+    transform: rotate(-45deg);
 }
 /*-------------POPUP--------------*/
 .popup {
@@ -860,10 +875,11 @@ a {
     position: absolute;
     top: 20px;
     right: 25px;
-    opacity: 0.3;
+    transform: scale(1);
+    transition: .2s ease transform;
 }
 .popup__close:hover {
-    opacity: 1;
+    transform: scale(1.2);
 }
 .popup__close:before, .popup__close:after {
     position: absolute;
