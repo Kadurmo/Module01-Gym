@@ -450,10 +450,9 @@ a {
     z-index: -1;
 }
 .subscription-email {
-    padding: 22px 45% 22px 20px;
+    padding: 22px 40% 22px 20px;
     font-size: 18px;
     border: none;
-    margin: 0 auto;
 }
 .subscription-btn {
     padding: 20px 45px;
@@ -471,9 +470,6 @@ a {
 .subscription-btn:hover {
     background-color: #2B3541;
     color: #FBF138;
-}
-.subscription-form {
-    max-width: 400px;
 }
 .subscription-input {
     display: flex;
@@ -663,6 +659,7 @@ a {
     position: relative;
     z-index: 1;
     margin-top: 10px;
+    text-decoration: none;
 }
 .footer-email::before {
     content: " ";
@@ -1147,17 +1144,19 @@ input[type="tel"] {
         width: 40%;
     }
     .subscription-btn-mobile {
-        padding: 20px 36%;
+        padding: 20px;
         background-color: #FBF138;
         font-weight: 700;
         font-size: 16px;
         line-height: 150%;
+        text-align: center;
         text-transform: uppercase;
         border: none;
         cursor: pointer;
         display: block;
         margin: 0 auto;
         margin-top: 20px;
+        width: 100%;
     }
     .about-company {
         margin: 50px 0;
@@ -1175,6 +1174,7 @@ input[type="tel"] {
         display: none;
     }
     .subscription-form {
+        max-width: 400px;
         margin: 0 auto;
     }
     .company-btn-mobile {
@@ -1324,10 +1324,7 @@ input[type="tel"] {
         padding: 20px 20px 15px;
     }
     .subscription-email {
-        padding: 20px 26% 20px 25px;
-    }
-    .subscription-btn-mobile {
-        padding: 20px 30%;
+        width: 100%;
     }
     .footer-text {
         font-size: 11px;
@@ -1449,12 +1446,6 @@ input[type="tel"] {
     .timing-grid-description {
         font-size: 12px;
         margin-bottom: 0;
-    }
-    .subscription-email {
-        padding: 20px 15% 20px 20px;
-    }
-    .subscription-btn-mobile {
-        padding: 20px 27%;
     }
     .subscription-label {
         margin: 0;
