@@ -509,12 +509,12 @@ a {
 .subscription-checkbox:checked + label::after{
    content:'';
    position: absolute;
-   width: 16px;
-   height: 16px;
+   width: 13px;
+   height: 13px;
    transition: all .2s ease;
    opacity: 1;
-   left: 1.9px;
-   top: calc(40% - 9px);
+   left: 3px;
+   top: calc(40% - 6px);
    background-size: cover;
    background-repeat: no-repeat;
    background-image: url("../img/icons/arrow_input.svg");
@@ -533,12 +533,12 @@ a {
 .checkbox:not(:checked) + label::after{
    content:'';
    position: absolute;
-   width: 16px;
-   height: 16px;
+   width: 13px;
+   height: 13px;
    transition: all .2s ease;
-   opacity: 0;
-   left: 1.9px;
-   top: calc(40% - 9px);
+   opacity: 1;
+   left: 3px;
+   top: calc(40% - 6px);
    background-position: 0 -12px;
    background-color: transparent;
    background-repeat: no-repeat;
