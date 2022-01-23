@@ -513,11 +513,11 @@ a {
    height: 16px;
    transition: all .2s ease;
    opacity: 1;
-   left: 2.4px;
-   top: calc(40% - 7px);
+   left: 1.9px;
+   top: calc(40% - 9px);
    background-size: cover;
    background-repeat: no-repeat;
-   background-image: url("../img/icons/checkbox__active.svg");
+   background-image: url("../img/icons/arrow_input.svg");
 }
  .subscription-checkbox:not(:checked) + label::before{
    content:'';
@@ -537,13 +537,13 @@ a {
    height: 16px;
    transition: all .2s ease;
    opacity: 0;
-   left: 2.4px;
-   top: calc(40% - 7px);
+   left: 1.9px;
+   top: calc(40% - 9px);
    background-position: 0 -12px;
    background-color: transparent;
    background-repeat: no-repeat;
    background-size: cover;
-   background-image: url("../img/icons/checkbox__active.svg");
+   background-image: url("../img/icons/arrow_input.svg");
 }
  .radio:checked + label::before{
     border-radius: 100%;
