@@ -1125,6 +1125,8 @@ input[type="tel"] {
     .header-logo {
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
+        flex: 0 1 33.333%;
     }
     .banner {
         margin-bottom: 30px;
@@ -1362,6 +1364,10 @@ input[type="tel"] {
         font-size: 16px;
         line-height: 120%;
     }
+    .event-type {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
     .subscription-form {
         max-width: 330px;
     }
@@ -1431,9 +1437,6 @@ input[type="tel"] {
     .subscription-title::before {
         left: 4%;
     }
-    .header-logo {
-        flex-basis: 130%;
-    }
     .social-net {
         gap: 20px;
     }
@@ -1470,10 +1473,6 @@ input[type="tel"] {
         padding: 6px 5px;
         top: 110px;
         font-size: 11px;
-    }
-    .event-type {
-        padding: 6px 15px;
-        font-size: 12px;
     }
     .banner-link {
         margin-left: 0;
