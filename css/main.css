@@ -190,7 +190,7 @@ a {
     height: 100%;
     background: linear-gradient(90deg, rgba(253, 249, 182, 0.7) 1%, rgba(253, 249, 182, 0) 70%, rgba(253, 249, 182, 0.5) 70%, rgba(253, 249, 182, 0) 110%);
     position: absolute;
-    right: -70px;
+    right: -60px;
     z-index: -1;
     max-width: 70%;
 }
