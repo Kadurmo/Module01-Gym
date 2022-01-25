@@ -846,7 +846,7 @@ a {
     visibility: visible;
 }
 .popup:target .popup__content {
-    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	transform: scale(1) rotate(0deg);
     opacity: 1;
 }
 .popup__body {
@@ -865,6 +865,9 @@ a {
     padding: 60px 45px;
     margin: 0 auto;
     margin-bottom: 40px;
+    opacity: 0;
+    transition: all .8s ease 0s;
+	transform: scale(0) rotate(720deg);
 }
   .popup__close {
     width: 22px;
