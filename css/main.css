@@ -150,11 +150,11 @@ a {
     text-transform: lowercase;
 }
 .banner-text {
-    width: 270px;
     margin-left: 90px;
     margin-top: 20px;
 }
 .banner-text p {
+    width: 270px;
     margin-bottom: 53px;
 }
 .banner-link {
@@ -1138,7 +1138,8 @@ input[type="tel"] {
         margin-left: 0;
     }
     .banner-link {
-        margin-left: 0;
+        display:block;
+        text-align: center;
     }
     .event-type {
         left: 0;
@@ -1476,9 +1477,6 @@ input[type="tel"] {
         padding: 6px 5px;
         top: 110px;
         font-size: 11px;
-    }
-    .banner-link {
-        margin-left: 0;
     }
     .subscription {
         margin-top: 0;
