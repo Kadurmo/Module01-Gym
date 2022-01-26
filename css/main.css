@@ -332,10 +332,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    box-shadow: 0px 0px 0px transparent;
     border: 1px solid rgb(43 52 64 / 50%);
     position: relative;
     padding: 20px 30px;
-    transition: .2s ease border, .2s ease box-shadow, .2s ease background;
+    transition: .2s;
 }
 .timetable-grid-item:nth-child(1) {
     grid-area: 1 / 1 / 1 / 1;
@@ -581,7 +582,6 @@ a {
     margin-bottom: 65px;
     justify-content: space-between;
 }
-.about-company-cover {padding-right: 15px;}
 .about-company-cover img {
     position: absolute;
     width: 580px;
@@ -636,11 +636,12 @@ a {
 .footer {
     background-color: #F3F3F3;
     padding-top: 35px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 .footer-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .footer-nav {
     list-style-type: none;
@@ -846,8 +847,8 @@ a {
     visibility: visible;
 }
 .popup:target .popup__content {
-	transform: scale(1) rotate(0deg);
-    opacity: 1;
+	transform: scale(1);
+	opacity: 1;
 }
 .popup__body {
     min-height: 100%;
@@ -865,9 +866,9 @@ a {
     padding: 60px 45px;
     margin: 0 auto;
     margin-bottom: 40px;
-    opacity: 0;
-    transition: all .8s ease 0s;
-	transform: scale(0) rotate(720deg);
+	transform: perspective(600px) scale(0.2);
+	opacity: 0;
+    transition: all .8s;
 }
   .popup__close {
     width: 22px;
@@ -976,8 +977,8 @@ input[type="tel"] {
         margin-left: 0;
     }
     .company-image {
-        width: 40vw;
         height: 290px;
+        flex: 0 0 42.333%;
     }
     .about-company-flex {
         margin-bottom: 65px;
@@ -990,11 +991,11 @@ input[type="tel"] {
     }
     .company-item {
         flex-wrap: wrap;
-        gap: 20px 15%;
-        justify-content: space-around;
+        gap: 20px 30%;
+        justify-content: flex-start;
     }
     .company-achiments {
-        width: 35%;
+        width: 28%;
     }
     .company-achiments:last-child {
         flex: 0 0 35%;
@@ -1011,7 +1012,10 @@ input[type="tel"] {
     }
     .social-footer-mobile {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 35px;
+        padding: 40px 0;
     }
     .footer-email::before {
         bottom: 12px;
@@ -1053,8 +1057,9 @@ input[type="tel"] {
         height: 60vw;
     }
     .event-three {
-        width: 91%;
-        height: 100vw;
+        width: 93%;
+        height: 55vw;
+        height: 360px;
     }
     .banner-box {
         padding: 20px 0 50px 5px;
@@ -1250,10 +1255,6 @@ input[type="tel"] {
     .company-mobile {
         margin: 40px 0 80px;
     }
-    .footer-item {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
     .footer-nav {
         flex-basis: auto;
         gap: 25px;
@@ -1266,10 +1267,6 @@ input[type="tel"] {
     .logo-footer {
         flex-basis: auto;
         margin: 0 auto;
-    }
-    .social-footer-mobile {
-        margin-bottom: 35px;
-        justify-content: space-around;
     }
     .timetable-grid {
         display: flex;
@@ -1357,6 +1354,8 @@ input[type="tel"] {
     .event-three {
         padding-top: 20px;
         padding-left: 20px;
+        height: 34vh;
+        width: 90%;
     }
     .event-flex-btn {
         padding: 12px 8px;
@@ -1431,6 +1430,16 @@ input[type="tel"] {
     .burger {
         margin-left: 20px;
         margin-top: 3px;
+    }
+    .footer-item {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .social-footer-mobile {
+        margin-bottom: 35px;
+        justify-content: space-around;
+        padding: 0;
+        flex: 0 1 33.333%;
     }
 }
 @media (max-width: 360px) {

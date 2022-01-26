@@ -107,7 +107,11 @@
                             <a class="event-btn-mobile" href="#Modal_two"></a>
                         </div>
                         <div class="event-three event-item">
-                            <img src="./img/event-three.png" alt="event-three">
+                            <picture>
+                                <source srcset="./img/event-three.png" media="(min-width: 1000px)">
+                                <source srcset="./img/event-three--tablet.png" media="(min-width: 500px)">
+                            <img src="./img/event-three.png" alt="MDN">
+                           </picture>
                             <p class="event-flex-date">
                                 15.07
                             </p>
