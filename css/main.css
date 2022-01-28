@@ -47,19 +47,18 @@ a {
 .header-item {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .header-logo {
-    flex-basis: 20%;
+    flex-basis: 155px;
 }
-.header-item nav {
-    flex-basis: 115%;
-}
+.header-item nav {flex-grow: 1;}
 .logo-header {
     display: block;
     background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
-    width: 120px;
-    height: 30px;
+    width: 100%;
+    height: 40px;
     transform: scale(1);
     transition: .2s ease transform;
 }
@@ -70,7 +69,7 @@ a {
     display: flex;
     list-style-type: none;
     gap: 54px;
-    margin-top: 4px;
+    margin: 0;
 }
 .header-nav li:hover {
     margin-top: -4px;
@@ -97,6 +96,7 @@ a {
     display: flex;
     gap: 30px;
     margin-bottom: 10px;
+    flex-basis: 80px;
 }
 .header-IN {
     display: block;
@@ -134,7 +134,7 @@ a {
     width: 100%;
 }
 .banner-box {
-    padding: 225px 0 0 5px;
+    padding: 233px 0 0 5px;
 }
 .banner-title {
     width: 635px;
@@ -342,29 +342,19 @@ a {
     grid-area: 1 / 1 / 1 / 1;
 }
 .timetable-grid-item:nth-child(2) {
-    grid-area: 1 / 2 / 4 / 2;
-}
-.timetable-grid-item:nth-child(3) {
-    grid-area: 1 / 3 / 3 / 3;
-}
-.timetable-grid-item:nth-child(4) {
     grid-area: 2 / 1 / 5 / 1;
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
     box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
     border: 1px solid transparent;
 }
-.timetable-grid-item:nth-child(4)
-.timetable-grid-description {
-    display: block;
-    max-width: 280px;
-    transition: .2s ease background;
-    max-height: 500px;
+.timetable-grid-item:nth-child(3) {
+    grid-area: 1 / 2 / 4 / 2;
 }
-.timetable-grid-item:nth-child(4):hover {
-    background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
+.timetable-grid-item:nth-child(4) {
+    grid-area: 4 / 2 / 5 / 2;
 }
 .timetable-grid-item:nth-child(5) {
-    grid-area: 4 / 2 / 5 / 2;
+    grid-area: 1 / 3 / 3 / 3;
 }
 .timetable-grid-item:nth-child(6) {
     grid-area: 3 / 3 / 5 / 3;
@@ -379,20 +369,20 @@ a {
     height: 65px;
 }
 .timetable-grid-item:nth-child(2) img {
-    width: 40px;
-    height: 85px;
+    width: 65px;
+    height: 150px;
 }
 .timetable-grid-item:nth-child(3) img {
-    width: 90px;
-    height: 50px;
+    width: 55px;
+    height: 77px;
 }
 .timetable-grid-item:nth-child(4) img {
     width: 65px;
     height: 105px;
 }
 .timetable-grid-item:nth-child(5) img {
-    width: 65px;
-    height: 60px;
+    width: 85px;
+    height: 70px;
 }
 .timetable-grid-item:nth-child(6) img {
     width: 58px;
@@ -414,14 +404,72 @@ a {
 }
 .timetable-grid-description {
     max-width: 280px;
-    max-height: 0;
     overflow: hidden;
     transition: .3s linear;
     margin: 0;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
 }
 .timetable-grid-item:hover
 .timetable-grid-description{
-    max-height: 500px;
+    visibility: visible;
+    opacity: 1;
+}
+.timetable-text--block {
+    position: absolute;
+    bottom: -19%;
+    left: 4%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 100;
+    transform: translateY(0);
+    transition: transform 0.28s ease;
+    flex-direction: column;
+}
+.timetable-grid-item:hover
+.timetable-text--block{
+    transform: translateY(-37%);
+}
+.timetable-grid-item:nth-child(2)
+.timetable-text--block {
+    bottom: 23%;
+    transform: translateY(25%);
+}
+.timetable-grid-item:nth-child(2)
+.timetable-grid-description {
+    bottom: 18%;
+    visibility: visible;
+    opacity: 1;
+}
+.timetable-grid-item:nth-child(2):hover {
+    background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
+}
+.timetable-grid-item:nth-child(3)
+.timetable-text--block {
+    bottom: -17%;
+}
+.timetable-grid-item:nth-child(3):hover
+.timetable-text--block {
+    bottom: -16%;
+}
+.timetable-grid-item:nth-child(4)
+.timetable-text--block {
+    bottom: -28%;
+}
+.timetable-grid-item:nth-child(5)
+.timetable-text--block {
+    bottom: -22%;
+}
+.timetable-grid-item:nth-child(5):hover
+.timetable-text--block {
+    transform: translateY(-40%);
+}
+.timetable-grid-item:nth-child(6)
+.timetable-text--block {
+    bottom: -15%;
 }
 /*-------------SUBSCRIPTION--------------*/
 .subscription {
@@ -504,7 +552,6 @@ a {
    left:0;
    top:calc(50% - 10px);
    background-color: #2B3541;
-   border-radius: 2px;
    border: 2px solid #2B3541;
 }
 .subscription-checkbox:checked + label::after{
@@ -528,7 +575,7 @@ a {
    left:0;
    top:calc(50% - 10px);
    background-color: transparent;
-   border-radius: 2px;
+   /* border-radius: 2px; */
    border: 2px solid #2B3541;
 }
 .checkbox:not(:checked) + label::after{
@@ -574,7 +621,7 @@ a {
 }
 /*-------------ABOUT-COMPANY--------------*/
 .about-company {
-    margin-top: 160px;
+    margin-top: 157px;
     margin-bottom: 150px;
 }
 .about-company-flex {
@@ -598,7 +645,7 @@ a {
 }
 .about-company-text {
     max-width: 470px;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
 }
 .about-company-btn {
     padding: 23px 52px;
@@ -635,7 +682,7 @@ a {
 /*-------------FOOTER--------------*/
 .footer {
     background-color: #F3F3F3;
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 10px;
 }
 .footer-item {
@@ -1159,24 +1206,6 @@ input[type="tel"] {
         right: 0;
         bottom: 0;
     }
-    .timetable_one {
-        order: 1;
-    }
-    .timetable_two {
-        order: 3;
-    }
-    .timetable_three {
-        order: 5;
-    }
-    .timetable_four {
-        order: 2;
-    }
-    .timetable_five {
-        order: 4;
-    }
-    .timetable_six {
-        order: 6;
-    }
     .timetable-date {
         font-size: 16px;
         line-height: 120%;
@@ -1275,17 +1304,16 @@ input[type="tel"] {
         grid-area: 1 / 1 / 2 / 2;
     }
     .timetable-grid-item:nth-child(2) {
-        grid-area: 2 / 1 / 3 / 2;
+        grid-area: 1 / 2 / 2 / 3;
     }
     .timetable-grid-item:nth-child(3) {
         grid-area: 2 / 1 / 3 / 2;
-        grid-area: 3 / 1 / 4 / 2;
     }
     .timetable-grid-item:nth-child(4) {
-        grid-area: 1 / 2 / 2 / 3;
+        grid-area: 2 / 2 / 3 / 3;
     }
     .timetable-grid-item:nth-child(5) {
-        grid-area: 2 / 2 / 3 / 3;
+        grid-area: 3 / 1 / 4 / 2;
     }
     .timetable-grid-item:nth-child(6) {
         grid-area: 3 / 2 / 4 / 3;
@@ -1293,7 +1321,7 @@ input[type="tel"] {
     .timetable-grid-item:nth-child(1) img {
         width: 40px;
         height: 40px;
-        margin-right: 20px;
+        margin-right: 7px;
     }
     .timetable-grid-item:nth-child(2) img {
         width: 25px;
@@ -1319,6 +1347,31 @@ input[type="tel"] {
         width: 35px;
         height: 40px;
         margin-right: 20px;
+    }
+    .timetable-grid-item:hover
+    .timetable-text--block{
+        transform: translateY(-50%);
+    }
+    .timetable-grid-item:nth-child(1)
+    .timetable-text--block {
+        bottom: -15%;
+    }
+    .timetable-grid-item:nth-child(2)
+    .timetable-text--block {
+        bottom: 23%;
+        transform: translateY(25%);
+    }
+    .timetable-grid-item:nth-child(3)
+    .timetable-text--block {
+        bottom: -22%;
+    }
+    .timetable-grid-item:nth-child(4)
+    .timetable-text--block {
+        bottom: -23%;
+    }
+    .timetable-grid-item:nth-child(5):hover
+    .timetable-text--block {
+        transform: translateY(-56%);
     }
     .footer-nav {
         gap: 95px;
@@ -1399,6 +1452,32 @@ input[type="tel"] {
     .timetable-grid-item {
         height: 120px;
         padding: 20px 20px 15px;
+    }
+    .timetable-text--block {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .timetable-grid-item:nth-child(1)
+    .timetable-grid-description {
+        position: relative;
+        left: 9%;
+    }
+    .timetable-grid-item:nth-child(2)
+    .timetable-text--block {
+        transform: translateY(-43%);
+    }
+    .timetable-grid-item:nth-child(2)
+    .timetable-grid-description {
+        position: relative;
+        top: 24px;
+        /* right: 24%; */
+    }
+    .timetable-grid-item:nth-child(3)
+    .timetable-grid-description {
+        position: relative;
+        /* top: 65px; */
+        /* right: 20%; */
     }
     .subscription-email {
         width: 100%;
