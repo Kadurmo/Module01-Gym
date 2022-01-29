@@ -419,7 +419,7 @@ a {
 .timetable-text--block {
     position: absolute;
     bottom: -19%;
-    left: 4%;
+    left: 10%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -461,7 +461,7 @@ a {
 }
 .timetable-grid-item:nth-child(5)
 .timetable-text--block {
-    bottom: -22%;
+    bottom: -25%;
 }
 .timetable-grid-item:nth-child(5):hover
 .timetable-text--block {
@@ -469,7 +469,7 @@ a {
 }
 .timetable-grid-item:nth-child(6)
 .timetable-text--block {
-    bottom: -15%;
+    bottom: -13%;
 }
 /*-------------SUBSCRIPTION--------------*/
 .subscription {
@@ -1463,21 +1463,13 @@ input[type="tel"] {
         position: relative;
         left: 9%;
     }
-    .timetable-grid-item:nth-child(2)
-    .timetable-text--block {
-        transform: translateY(-43%);
-    }
-    .timetable-grid-item:nth-child(2)
-    .timetable-grid-description {
-        position: relative;
-        top: 24px;
-        /* right: 24%; */
-    }
     .timetable-grid-item:nth-child(3)
-    .timetable-grid-description {
-        position: relative;
-        /* top: 65px; */
-        /* right: 20%; */
+    .timetable-text--block {
+        bottom: 0%;
+    }
+    .timetable-grid-item:nth-child(5)
+    .timetable-text--block {
+        bottom: 0%;
     }
     .subscription-email {
         width: 100%;
