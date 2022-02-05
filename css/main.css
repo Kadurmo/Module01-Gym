@@ -1635,4 +1635,7 @@ input[type="tel"] {
       input[type="tel"] {
           margin-bottom: 20px;
       }
+      .timetable-text--block {
+          left: 5%;
+      }
 }
