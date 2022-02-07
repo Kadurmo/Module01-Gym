@@ -366,10 +366,7 @@ a {
     border: 1px solid transparent;
 }
 .timetable-grid-item:nth-child(2):hover {
-    grid-area: 2 / 1 / 5 / 1;
     background: linear-gradient(180deg, rgba(251, 241, 56, .7) 0%, rgba(253, 249, 182, 0.45) 100%);
-    box-shadow: 0px 4px 30px rgba(43, 53, 65, 0.2);
-    border: 1px solid transparent;
 }
 .timetable-grid-item:nth-child(1) img {
     width: 65px;
@@ -410,9 +407,20 @@ a {
 }
 .timetable-block {
     transition: .3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+    transform: translateY(1in);
+}
+.timetable-grid-item:nth-child(1)
+.timetable-block {
     transform: translateY(0.7in);
 }
-
+.timetable-grid-item:nth-child(2)
+.timetable-block {
+    transform: translateY(0in);
+}
+.timetable-grid-item:nth-child(6)
+.timetable-block {
+    transform: translateY(0.7in);
+}
 .timetable-grid-item:hover
 .timetable-block {
 transform: translateY(0in);
@@ -1100,6 +1108,9 @@ input[type="tel"] {
         right: 0px;
         -o-object-fit: contain;
            object-fit: contain;
+    }
+    .timetable-grid-title {
+        margin: 10px 0;
     }
     .company-item {
         justify-content: flex-start;
