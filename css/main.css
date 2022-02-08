@@ -70,6 +70,7 @@ a {
     list-style-type: none;
     gap: 54px;
     margin: 0;
+    transition: .3s cubic-bezier(0.29, 1.2, 0.58, 1);
 }
 .header-nav li:hover {
     margin-top: -4px;
@@ -188,7 +189,7 @@ a {
 .banner-gradient {
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(253, 249, 182, 0.7) 1%, rgba(253, 249, 182, 0) 70%, rgba(253, 249, 182, 0.5) 70%, rgba(253, 249, 182, 0) 110%);
+    background: linear-gradient(90deg, rgb(253 249 182 / 40%) 10%, rgb(253 249 182 / 10%) 70%, rgb(253 249 182 / 45%) 70%, rgba(253, 249, 182, 0) 110%);
     position: absolute;
     right: -60px;
     z-index: -1;
@@ -291,6 +292,7 @@ a {
     font-size: 16px;
     line-height: 150%;
     background-color: transparent;
+    border: none;
     color: transparent;
     visibility: hidden;
     text-transform: uppercase;
@@ -407,7 +409,7 @@ a {
 }
 .timetable-block {
     transition: .3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    transform: translateY(1in);
+    transform: translateY(0.9in);
 }
 .timetable-grid-item:nth-child(1)
 .timetable-block {
@@ -552,7 +554,6 @@ transform: translateY(0in);
    left:0;
    top:calc(50% - 10px);
    background-color: transparent;
-   /* border-radius: 2px; */
    border: 2px solid #2B3541;
 }
 .checkbox:not(:checked) + label::after{
@@ -587,7 +588,6 @@ transform: translateY(0in);
     line-height: 150%;
     font-weight: 400;
     color: #8F949A;
-    -webkit-text-decoration-line: none;
     text-decoration-line: none;
     border-bottom: 1px #8F949A solid;
     transition: .2s ease color, .2s ease border-bottom;
@@ -1045,16 +1045,14 @@ input[type="tel"] {
         bottom: 12px;
     }
     .footer-nav {
-        flex-basis: 550px;
+        flex-basis: 540px;
         gap: 125px;
+        justify-content: flex-end;
     }
     h1,
     h2,
     h3 {
         font-size: 35px;
-    }
-    p {
-        font-size: 17px;
     }
     .footer-text {
         font-size: 12px;
@@ -1159,9 +1157,12 @@ input[type="tel"] {
     }
     .header-logo {
         display: flex;
-        align-items: flex-start;
         justify-content: space-between;
-        flex: 0 1 33.333%;
+        flex-basis: 200px;
+        align-items: stretch;
+    }
+    .burger {
+        margin-top: 3px;
     }
     .banner {
         margin-bottom: 30px;
@@ -1185,6 +1186,7 @@ input[type="tel"] {
         width: 30px;
         right: 0;
         bottom: 0;
+        border: none;
     }
     .timetable-date {
         font-size: 16px;
@@ -1264,17 +1266,13 @@ input[type="tel"] {
     .company-mobile {
         margin: 40px 0 80px;
     }
-    .footer-nav {
-        flex-basis: auto;
-        gap: 25px;
-    }
     .footer-end {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .logo-footer {
-        flex-basis: auto;
+        flex-basis: 130px;
     }
     .timetable-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1301,38 +1299,8 @@ input[type="tel"] {
     .timetable-grid-item:nth-child(6) {
         grid-area: 3 / 2 / 4 / 3;
     }
-    .timetable-grid-item:nth-child(1) img {
-        width: 40px;
-        height: 40px;
-        margin-right: 7px;
-    }
-    .timetable-grid-item:nth-child(2) img {
-        width: 25px;
-        height: 45px;
-        margin-right: 20px;
-    }
-    .timetable-grid-item:nth-child(3) img {
-        width: 45px;
-        height: 25px;
-        margin-right: 20px;
-    }
-    .timetable-grid-item:nth-child(4) img {
-        width: 35px;
-        height: 55px;
-        margin-right: 20px;
-    }
-    .timetable-grid-item:nth-child(5) img {
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
-    }
-    .timetable-grid-item:nth-child(6) img {
-        width: 35px;
-        height: 40px;
-        margin-right: 20px;
-    }
     .footer-nav {
-        gap: 95px;
+        gap: 25px;
     }
     .popup__title {
       font-size: 24px;
@@ -1341,6 +1309,9 @@ input[type="tel"] {
 @media (max-width: 650px) {
     .container {
         padding: 0 10px;
+    }
+    .header-logo {
+        flex-basis: 170px;
     }
     .banner-title {
         width: 324px;
@@ -1354,7 +1325,7 @@ input[type="tel"] {
         font-size: 27px;
     }
     p {
-        font-size: 16px;
+        font-size: 15px;
     }
     .event-header {
         margin-bottom: 22px;
@@ -1404,10 +1375,48 @@ input[type="tel"] {
         align-items: center;
         height: 160px;
     }
+    .timetable-grid-item:nth-child(1) img {
+        width: 40px;
+        height: 40px;
+        margin-right: 7px;
+    }
+    .timetable-grid-item:nth-child(2) img {
+        width: 25px;
+        height: 45px;
+        margin-right: 20px;
+    }
+    .timetable-grid-item:nth-child(3) img {
+        width: 30px;
+        height: 35px;
+        margin-right: 20px;
+    }
+    .timetable-grid-item:nth-child(4) img {
+        width: 35px;
+        height: 55px;
+        margin-right: 20px;
+    }
+    .timetable-grid-item:nth-child(5) img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    .timetable-grid-item:nth-child(6) img {
+        width: 35px;
+        height: 40px;
+        margin-right: 20px;
+    }
     .timetable-block {
         display: flex;
     }
-    .timetable-block--text {
+    .timetable-grid-item:nth-child(4)
+    .timetable-block,
+    .timetable-grid-item:nth-child(5)
+    .timetable-block {
+        transform: translateY(0.7in);
+    }
+    .timetable-grid-item:hover
+    .timetable-block {
+    transform: translateY(0in);
     }
     .subscription-form {
         max-width: 330px;
@@ -1423,7 +1432,9 @@ input[type="tel"] {
         font-size: 11px;
     }
     .footer-nav {
-        gap: 20px;
+        gap: 15px;
+        flex-wrap: wrap;
+        flex-basis: auto;
     }
     .modal {
         width: 60%;
@@ -1464,20 +1475,6 @@ input[type="tel"] {
     }
     .popup__text {
       margin-bottom: 25px;
-    }
-    .burger {
-        margin-left: 20px;
-        margin-top: 3px;
-    }
-    .footer-item {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-    .social-footer-mobile {
-        margin-bottom: 35px;
-        justify-content: space-around;
-        padding: 0;
-        flex: 0 1 33.333%;
     }
 }
 @media (max-width: 360px) {
@@ -1533,6 +1530,9 @@ input[type="tel"] {
         line-height: 120%;
         opacity: 0.7;
     }
+    .timetable-block {
+        transform: translateY(0.7in);
+    }
     .timetable-grid-description {
         font-size: 12px;
         max-width: 240px;
@@ -1558,11 +1558,22 @@ input[type="tel"] {
     .footer-front {
         font-size: 10px;
     }
-    .footer-nav {
-        gap: 10px;
-    } 
     .footer-nav a {
         font-size: 12px;
+    }
+    .logo-footer {
+        flex-basis: 45px;
+        margin: 0;
+    }
+    .footer-item {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .social-footer-mobile {
+        margin-bottom: 35px;
+        justify-content: space-evenly;
+        padding: 0;
+        flex: 0 1 33.333%;
     }
     .modal {
         padding: 50px 55px 40px;
