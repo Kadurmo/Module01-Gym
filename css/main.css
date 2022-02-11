@@ -82,7 +82,7 @@ a {
     line-height: 1.5;
     color: #2B3541;
 }
-.header-item .header-nav a:after {
+.header-nav li:after {
 	content: '';
     display: block;
     width: 0;
@@ -90,7 +90,7 @@ a {
     background-color: #2B3540;
     transition: .2s ease width;
 }
-.header-item .header-nav a:hover:after {
+.header-nav li:hover:after {
     width: 100%;
 }
 .social-net {
