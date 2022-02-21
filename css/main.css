@@ -316,7 +316,7 @@ a {
     align-items: baseline;
 }
 .timetable-title {
-    max-width: 290px;
+    max-width: 250px;
 }
 .timetable-date {
     font-weight: 700;
@@ -1142,6 +1142,9 @@ input[type="tel"] {
     }
 }
 @media (max-width: 860px) {
+    .event-flex-title {
+        font-size: 22px;
+    }
     .header {
         padding: 20px 0 10px;
     }
@@ -1272,7 +1275,7 @@ input[type="tel"] {
         align-items: center;
     }
     .logo-footer {
-        flex-basis: 130px;
+        flex-basis: 100px;
     }
     .timetable-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1441,8 +1444,7 @@ input[type="tel"] {
     }
     .footer-nav {
         gap: 15px;
-        flex-wrap: wrap;
-        flex-basis: auto;
+        flex-basis: inherit;
     }
     .modal {
         width: 60%;
@@ -1485,7 +1487,20 @@ input[type="tel"] {
       margin-bottom: 25px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 450px) {
+    .footer-item {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .social-footer-mobile {
+        margin-bottom: 35px;
+        justify-content: space-evenly;
+        padding: 0;
+        flex: 0 1 33.333%;
+    }
+
+
+    
     .container {
         padding-left: 10px;
         padding-right: 10px;
@@ -1566,16 +1581,6 @@ input[type="tel"] {
     .logo-footer {
         flex-basis: 45px;
         margin: 0;
-    }
-    .footer-item {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-    .social-footer-mobile {
-        margin-bottom: 35px;
-        justify-content: space-evenly;
-        padding: 0;
-        flex: 0 1 33.333%;
     }
     .modal {
         padding: 50px 55px 40px;
