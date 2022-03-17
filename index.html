@@ -90,9 +90,9 @@
                             <p class="event-flex-title">
                                 Марафон выносливости
                             </p>
-                            <button class="event-flex-btn" onclick="window.location.href = '#Modal_one'">Учавствовать</button>
+                            <a class="event-flex-btn" href="#Modal_one">Учавствовать</a>
                             <p class="event-type">марафон</p>
-                            <button class="event-btn-mobile" onclick="window.location.href = '#Modal_one'"></button>
+                            <a class="event-btn-mobile" href="#Modal_one"></a>
                         </div>
                         <div class="event-two event-item">
                             <img src="./img/event-two.png" alt="event-two">
@@ -102,9 +102,9 @@
                             <p class="event-flex-title">
                                 Как стать тренером?
                             </p>
-                            <button class="event-flex-btn" onclick="window.location.href = '#Modal_two'">Учавствовать</button>
+                            <a class="event-flex-btn" href="#Modal_two">Учавствовать</a>
                             <p class="event-type">вебинар</p>
-                            <button class="event-btn-mobile" onclick="window.location.href = '#Modal_two'"></button>
+                            <a class="event-btn-mobile" href="#Modal_two"></a>
                         </div>
                         <div class="event-three event-item">
                             <picture>
@@ -118,9 +118,9 @@
                             <p class="event-flex-title">
                                 Йога, как стиль жизни
                             </p>
-                            <button class="event-flex-btn" onclick="window.location.href = '#Modal_three'">Учавствовать</button>
+                            <a class="event-flex-btn" href="#Modal_two">Учавствовать</a>
                             <p class="event-type">вебинар</p>
-                            <button class="event-btn-mobile" onclick="window.location.href = '#Modal_three'"></button>
+                            <a class="event-btn-mobile" href="#Modal_two"></a>
                         </div>
                     </div>
                 </div>
@@ -249,13 +249,12 @@
                     <form class="subscription-form">
                         <div class="subscription-input">
                         <input type="email" name="email" placeholder="Ваш e-mail" class="subscription-email" required>
-                        <input type="submit" name="submit" id="submit" value="Подписаться" class="subscription-btn">
+                        <input data-da=".subscription-form, 860, 2" type="submit" name="submit" id="submit" value="Подписаться" class="subscription-btn">
                         </div>
                         <div class="subscription-label">
                             <input class="subscription-checkbox" type="checkbox" id="01">
                             <label for="01" class="subscription-label-text">Согласен с обработкой <a href="#" target="_blank"> персональных данных</a></label>
                         </div>
-                        <input type="submit" name="submit" id="submit-mobile" value="Подписаться" class="subscription-btn-mobile" required>
                     </form>
                 </div>
             </div>
@@ -271,9 +270,9 @@
                         <p class="about-company-text">
                             Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с&nbsp;нами и вы сами увидите, что мы проводим не&nbsp;только онлайн-тренировки.
                         </p>
-                        <a href="#" class="about-company-btn">Записаться</a>
+                        <a data-da=".company-item, 860, 6" href="#Modal_one" class="about-company-btn">Записаться</a>
                     </div>
-                    <div class="company-image"></div>
+                    <div data-da=".company-item, 860, 5" class="company-image"></div>
                 </div>
                 <div class="company-item">
                     <div class="company-achiments">
@@ -309,10 +308,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="company-mobile">
-                    <a href="#" class="company-btn-mobile">Записаться</a>
-                    <div class="company-image-mobile"></div>
-                </div>
             </div>
         </div>
     </main>
@@ -329,7 +324,7 @@
                         <li><a data-goto=".timetable" class="footer-link link_smooth" href="#">Расписание</a></li>
                         <li><a data-goto=".about-company" class="footer-link link_smooth" href="#">О компании</a></li>
                     </ul>
-                    <div class="social-footer">
+                    <div data-da=".footer-end, 1370, 0" class="social-footer">
                         <a href="mailto:info@freefit.com" class="footer-email">info@freefit.com</a>
                         <div class="social-footer-net">
                             <a href="#" class="header-IN"></a>
@@ -337,23 +332,16 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="social-footer-mobile">
-                    <a href="mailto:info@freefit.com" class="footer-email">info@freefit.com</a>
-                    <div class="social-footer-net">
-                        <a href="https://www.instagram.com" target="_blank" class="header-IN"></a>
-                        <a href="https://www.facebook.com" target="_blank" class="header-FB"></a>
-                    </div>
-                </div>
-
                 <div class="footer-end">
-                    <p class="footer-text">
-                        © 2020, Все права защищены
-                    </p>
-                    <p class="footer-text">
-                        Сделано в рамках курса учебной платформы
-                        <a href="https://annblok.ru" target="_blank" class="footer-front">Annblok</a>
-                    </p>
+                    <div class="footer_column">
+                        <p class="footer-text">
+                            © 2020, Все права защищены
+                        </p>
+                        <p class="footer-text">
+                            Сделано в рамках курса учебной платформы
+                            <a href="https://annblok.ru" target="_blank" class="footer-front">Annblok</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
