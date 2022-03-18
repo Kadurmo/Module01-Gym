@@ -886,6 +886,28 @@ transform: translateY(0in);
     border-radius: 100%;
     z-index: -1;
 }
+.popup_select {
+    font-size: 20px;
+    font-weight: 700;
+    appearance: none;
+    width: 100%;
+    height: 55px;
+    border: none;
+    text-align: center;
+    margin-top: 15px;
+    color: #2B3541;
+    outline: none;
+    background: 98% 50% / 9px 9px no-repeat url(../img/iconSelest.svg);
+    background-color: #fff;
+}
+.popup_select:focus {
+    background-color: #fff;
+}
+.popup_select option, .popup_select option:focus {
+    text-align: center;
+    background-color: #fff;
+    color: #2B3541;
+}
 .popup__text {
   margin: 15px auto 40px;
 }
@@ -899,8 +921,9 @@ transform: translateY(0in);
     display: block;
     outline: none;
     border: none;
-    padding: 23px 17px;
-    width: 92%;
+    width: calc(100% - 25px);
+    height: 65px;
+    padding-left: 25px;
 }
 .popup__form input[type="email"] {
     margin-bottom: 20px;
@@ -1228,6 +1251,7 @@ input[type="tel"]:focus {
         left: 0;
         right: auto;
     }
+    .event-btn {display: none;}
     .event-btn-mobile {
         display: block;
         position: absolute;
@@ -1340,9 +1364,6 @@ input[type="tel"]:focus {
     }
     .footer-nav {
         gap: 25px;
-    }
-    .popup__title {
-      font-size: 24px;
     }
 }
 @media (max-width: 650px) {
@@ -1482,13 +1503,6 @@ input[type="tel"]:focus {
         gap: 15px;
         flex-basis: inherit;
     }
-    .modal {
-        width: 60%;
-        margin: 0 auto;
-    }
-    .modal-form > input {
-        width: 56vw;
-    }
     .company-mobile {
         margin: 35px 0 55px;
     }
@@ -1512,7 +1526,10 @@ input[type="tel"]:focus {
       width: 70vw;
     }
     .popup__title {
-        font-size: 17px;
+      font-size: 24px;
+    }
+    .popup_select {
+      font-size: 17px;
     }
     .popup__title::before {
         top: -18px;
@@ -1613,20 +1630,16 @@ input[type="tel"]:focus {
         flex-basis: 45px;
         margin: 0;
     }
-    .modal {
-        padding: 50px 55px 40px;
-    }
-    .modal-title::before {
-        padding: 15px;
-        top: -12px;
-    }
     .popup__content {
       padding: 35px;
     }
-    .popup__form > input {
-        padding: 20px 20px 20px 10px;
+    input[type="tel"] {
+        margin-bottom: 20px;
     }
-      input[type="tel"] {
-          margin-bottom: 20px;
-      }
+    .popup__title {
+        font-size: 17px;
+    }
+    .popup_select {
+        font-size: 14px;
+    }
 }
